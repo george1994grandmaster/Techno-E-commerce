@@ -14,12 +14,16 @@ const ProductList: React.FC = () => {
   return (
     <div>
       <h1>Products</h1>
-      {products.map((product: Product) => (
-        <div key={product.id}>
-          <h3>{product.name}</h3>
-          <p>{product.price}</p>
-        </div>
-      ))}
+      {products.length > 0 ? (
+        products.map((product:Product) => (
+          <div key={product.id}>
+            <h3>{product.name}</h3>
+            <p>{product.price}</p>
+          </div>
+        ))
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 };

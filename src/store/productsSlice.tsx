@@ -17,11 +17,11 @@ const initialState: ProductsState = {
 
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
   try {
-    const response = await axios.get<Product[]>(
-      'https://george1994grandmaster.github.io/techno-products'
-    );
-    return response.data;
+    const response = await axios.get<{ products: Product[] }>('/api/products.json');
+    console.log('Data from API:', response.data);
+    return response.data.products;
   } catch (error) {
+    console.error('Error fetching products:', error);
     throw new Error('Failed to fetch products');
   }
 });
