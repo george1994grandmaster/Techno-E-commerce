@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchProducts, selectProducts } from '../store/productsSlice';
 import { Product } from '../types';
@@ -13,13 +14,13 @@ const ProductList: React.FC = () => {
 
   return (
     <div>
-      <h1>Products</h1>
       {products.length > 0 ? (
         products.map((product:Product) => (
-          <div key={product.id}>
+          <Link to={`/product/${product.id}`} key={product.id}>
             <h3>{product.name}</h3>
-            <p>{product.price}</p>
-          </div>
+            <h3>{product.price}</h3>
+            <br/>
+          </Link>
         ))
       ) : (
         <p>Loading...</p>

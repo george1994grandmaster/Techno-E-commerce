@@ -2,18 +2,33 @@
   "products": [
     {
       "id": 1,
-      "name": "Product A",
-      "price": 25.99
+      "name": "computer",
+      "price": 25.99,
+      "productId": 1
     },
     {
       "id": 2,
-      "name": "Product B",
-      "price": 19.95
+      "name": "phone",
+      "price": 19.95,
+      "productId": 2
     },
     {
       "id": 3,
-      "name": "Product C",
-      "price": 7.49
+      "name": "tablet",
+      "price": 15.78,
+      "productId": 3
+    },
+    {
+      "id": 4,
+      "name": "laptop",
+      "price": 19.95,
+      "productId": 4
+    },
+    {
+      "id": 5,
+      "name": "phone",
+      "price": 34.78,
+      "productId": 2
     }
   ]
 }

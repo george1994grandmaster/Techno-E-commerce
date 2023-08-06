@@ -3,13 +3,16 @@ import axios from 'axios';
 import { RootStore } from './store';
 import { Product } from '../types';
 
+
 interface ProductsState {
+  allProducts: Product[],
   products: Product[];
   loading: 'idle' | 'pending' | 'fulfilled' | 'rejected';
   error: string | null;
 }
 
 const initialState: ProductsState = {
+  allProducts: [],
   products: [],
   loading: 'idle',
   error: null,
@@ -17,11 +20,10 @@ const initialState: ProductsState = {
 
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
   try {
-    const response = await axios.get<{ products: Product[] }>('/api/products.json');
-    console.log('Data from API:', response.data);
-    return response.data.products;
+    const response = await axios.get<{products: Product[]}>('/api/products.json');
+    const allProducts = response.data.products;
+    return allProducts;
   } catch (error) {
-    console.error('Error fetching products:', error);
     throw new Error('Failed to fetch products');
   }
 });
@@ -29,7 +31,22 @@ export const fetchProducts = createAsyncThunk('products/fetchProducts', async ()
 const productsSlice = createSlice({
   name: 'products',
   initialState,
-  reducers: {},
+  reducers: {
+    filterProductsByLetter: (state, action: PayloadAction<string>) => {
+      const searchQuery = action.payload.toLowerCase();
+      state.products = state.allProducts.filter(product =>
+        product.name.toLowerCase().includes(searchQuery)
+      );
+    },
+    filterProductsById: (state, action) => {
+      const searchQuery = action.payload;
+      state.products = state.allProducts.filter(product =>
+        product.id == searchQuery
+      );console.log(state.products)
+      localStorage.setItem('filteredProducts', JSON.stringify(state.products));
+      
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchProducts.pending, (state) => {
@@ -37,6 +54,7 @@ const productsSlice = createSlice({
       })
       .addCase(fetchProducts.fulfilled, (state, action: PayloadAction<Product[]>) => {
         state.loading = 'fulfilled';
+        state.allProducts = action.payload;
         state.products = action.payload;
       })
       .addCase(fetchProducts.rejected, (state) => {
@@ -45,6 +63,6 @@ const productsSlice = createSlice({
   },
 });
 
-export const {} = productsSlice.actions;
+export const { filterProductsByLetter, filterProductsById} = productsSlice.actions;
 export default productsSlice.reducer;
 export const selectProducts = (state: RootStore) => state.products.products;
