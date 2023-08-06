@@ -2,17 +2,24 @@ import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectProducts } from '../store/productsSlice';
-import { filterProductsById  } from "../store/productsSlice";
+import { filterProductsById, filterProductsByLetter } from "../store/productsSlice";
 import { Product } from '../types';
 
 const ProductPage: React.FC = () => {
   const { productId } = useParams<{ productId: string }>(); 
+  const { searchQuery } = useParams<{ searchQuery: string }>();
   const products = useSelector(selectProducts);
   const dispatch = useDispatch<any>();
+  console.log(searchQuery)
 
   useEffect(() => {
     dispatch(filterProductsById(productId));
-    console.log(localStorage)
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (searchQuery) {
+      dispatch(filterProductsByLetter(searchQuery));
+    }
   }, [dispatch]);
 
   return (

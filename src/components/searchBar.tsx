@@ -1,16 +1,13 @@
 
-import { FC } from "react";
-import { useDispatch } from "react-redux";
-import { filterProductsByLetter } from "../store/productsSlice";
-
+import React, { FC, useState } from "react";
+import { Link } from "react-router-dom";
 
 const SearchBar: FC = () => {
-
-  const dispatch = useDispatch();
+  const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const query = event.target.value;
-    dispatch(filterProductsByLetter(query)); // Dispatch the action to filter products
+    setSearchQuery(query);
   };
 
   return (
@@ -20,11 +17,10 @@ const SearchBar: FC = () => {
         placeholder="Search products..."
         onChange={handleSearchChange}
       />
+      <Link to={`/search/${searchQuery}`}>Search</Link>
     </>
   );
-}
+};
 
 export default SearchBar;
-
-
   

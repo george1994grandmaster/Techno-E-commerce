@@ -3,7 +3,6 @@ import axios from 'axios';
 import { RootStore } from './store';
 import { Product } from '../types';
 
-
 interface ProductsState {
   allProducts: Product[],
   products: Product[];
@@ -42,9 +41,7 @@ const productsSlice = createSlice({
       const searchQuery = action.payload;
       state.products = state.allProducts.filter(product =>
         product.id == searchQuery
-      );console.log(state.products)
-      localStorage.setItem('filteredProducts', JSON.stringify(state.products));
-      
+      )
     },
   },
   extraReducers: (builder) => {

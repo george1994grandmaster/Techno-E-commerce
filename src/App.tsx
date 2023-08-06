@@ -13,6 +13,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Layout />}>
             <Route index element={<ProductList />} /> {/* Add this line */}
             <Route path="/product/:productId" element={<ProductPage/>} />
+            <Route path="/search/:searchQuery" element={<ProductPage />} />
           </Route>
         </Routes>
       </Router>
