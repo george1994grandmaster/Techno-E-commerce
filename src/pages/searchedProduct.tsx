@@ -1,20 +1,25 @@
 import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchProducts, selectProducts } from '../store/productsSlice';
+import { selectProducts } from '../store/productsSlice';
+import { filterProductsByLetter } from "../store/productsSlice";
 import { Product } from '../types';
 
-const ProductList: React.FC = () => {
-  const dispatch = useDispatch<any>();
+const SearchProduct: React.FC = () => {
+  const { productQuery } = useParams<{ productQuery: string }>();
   const products = useSelector(selectProducts);
-
+  const dispatch = useDispatch<any>();
+ 
   useEffect(() => {
-    dispatch(fetchProducts());
-  }, [dispatch]);
+    if (productQuery) {
+      dispatch(filterProductsByLetter(productQuery));
+    }
+  }, [dispatch, productQuery]);
 
   return (
     <div>
-      {products.length > 0 && (
+      {products.length > 0 && 
         products.map((product:Product) => (
           <Link to={`/products/detail/${product.id}`} key={product.id}>
             <h3>{product.name}</h3>
@@ -22,9 +27,9 @@ const ProductList: React.FC = () => {
             <br/>
           </Link>
         ))
-      ) }
+      }
     </div>
   );
 };
 
-export default ProductList;
+export default SearchProduct;
