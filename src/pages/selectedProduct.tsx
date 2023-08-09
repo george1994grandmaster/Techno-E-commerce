@@ -1,8 +1,8 @@
-import { useEffect, FC } from 'react';
+import { useEffect, useState, FC } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectProducts } from '../store/productsSlice';
-import { filterProductsById, addToCart } from "../store/productsSlice";
+import { selectProducts,  selectCartProducts} from '../store/productsSlice';
+import { filterProductsById, addToCart, removeFromCart } from "../store/productsSlice";
 import { useNavigate } from 'react-router-dom';
 import { Product } from '../types';
 
@@ -11,29 +11,52 @@ const SelectProduct: FC = () => {
   const navigate = useNavigate();
   const { productId } = useParams<{ productId: string }>(); 
   const products = useSelector(selectProducts);
+  const cartItems = useSelector(selectCartProducts);
   const dispatch = useDispatch<any>();
  
   useEffect(() => {
-    dispatch(filterProductsById(productId));
+    dispatch(filterProductsById(productId) as any);
   }, [dispatch, productId]);
 
+  useEffect(() => {
+    if (productId) {
+      const checkIsInCart = cartItems.some((item) => item.id === parseInt(productId));
+      setIsInCart(checkIsInCart); 
+    }
+  }, [cartItems, productId]);
+
+  const [isInCart, setIsInCart] = useState(false);
+
   const addToCartHandler = (product: any) => {
-    //localStorage.setItem('selectedProduct', JSON.stringify(product));
     dispatch(addToCart(product));
-    //navigate(`/shopping`);
+    navigate(`/shopping`);
   };
+
+  const removeCartHandler = (product: any) => {
+    dispatch(removeFromCart(product.id));
+    navigate(`/shopping`);
+  }
 
   return (
     <div>
       {products && (
-        <div key={products[0].id}>
+        <div>
           <h3>{products[0].name}</h3>
           <h3>{products[0].price}</h3>
-          <br/>
+          <br />
+          <button onClick={() => addToCartHandler(products[0])}>add to bag</button>
+
+          {isInCart ? (
+            <button onClick={() => removeCartHandler(products[0])} style={{ backgroundColor: 'red' }}>
+              Remove from Bag
+            </button>
+          ) : (
+            <button disabled style={{ backgroundColor: 'black' }}>
+              Remove from Bag
+            </button>
+          )}
         </div>
       )}
-      
-      <button onClick={() => addToCartHandler(products[0])}>add to bag</button>
     </div>
   );
 };

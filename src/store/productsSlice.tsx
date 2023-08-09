@@ -49,7 +49,15 @@ const productsSlice = createSlice({
       const newItem = action.payload;
       state.cartItems = [...state.cartItems, newItem];
       console.log(state.cartItems)
-    }
+      //state.cartItems= [];
+      //localStorage.setItem('selectedProduct', JSON.stringify(action.payload));
+    },
+
+    removeFromCart: (state, action) => {
+      state.cartItems = state.cartItems.filter(item => item.id != action.payload);
+      console.log(state.cartItems);
+      console.log(state.cartItems.length);
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -67,7 +75,7 @@ const productsSlice = createSlice({
   },
 });
 
-export const { filterProductsByLetter, filterProductsById, addToCart} = productsSlice.actions;
+export const { filterProductsByLetter, filterProductsById, addToCart, removeFromCart} = productsSlice.actions;
 export default productsSlice.reducer;
 export const selectProducts = (state: RootStore) => state.products.products;
 export const selectCartProducts = (state: RootStore) => state.products.cartItems;
