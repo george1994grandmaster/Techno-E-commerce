@@ -6,6 +6,7 @@ import { filterProductsById, addToCart } from "../store/productsSlice";
 import { useNavigate } from 'react-router-dom';
 import { Product } from '../types';
 
+
 const SelectProduct: FC = () => {
   const navigate = useNavigate();
   const { productId } = useParams<{ productId: string }>(); 
@@ -17,13 +18,14 @@ const SelectProduct: FC = () => {
   }, [dispatch, productId]);
 
   const addToCartHandler = (product: any) => {
-    localStorage.setItem('selectedProduct', JSON.stringify(product));
-    navigate(`/shopping`);
+    //localStorage.setItem('selectedProduct', JSON.stringify(product));
+    dispatch(addToCart(product));
+    //navigate(`/shopping`);
   };
 
   return (
     <div>
-      {products && products.length > 0 && (
+      {products && (
         <div key={products[0].id}>
           <h3>{products[0].name}</h3>
           <h3>{products[0].price}</h3>

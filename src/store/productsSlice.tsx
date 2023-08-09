@@ -33,7 +33,7 @@ const productsSlice = createSlice({
   name: 'products',
   initialState,
   reducers: {
-    filterProductsByLetter: (state, action: PayloadAction<string>) => {
+    filterProductsByLetter: (state, action) => {
       const searchQuery = action.payload.toLowerCase();
       state.products = state.allProducts.filter(product =>
         product.name.toLowerCase().includes(searchQuery)
@@ -43,11 +43,13 @@ const productsSlice = createSlice({
       const searchQuery = action.payload;
       state.products = state.allProducts.filter(product =>
         product.id == searchQuery
-      )
+      );
     },
     addToCart: (state, action) => {
-      state.cartItems = action.payload; // Set cartItems to the entire array
-    },
+      const newItem = action.payload;
+      state.cartItems = [...state.cartItems, newItem];
+      console.log(state.cartItems)
+    }
   },
   extraReducers: (builder) => {
     builder

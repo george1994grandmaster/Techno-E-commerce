@@ -5,20 +5,22 @@ import productsReducer from './productsSlice';
 
 const persistConfig = {
   key: 'root',
-  storage, 
+  storage,
 };
 
-const persistedReducer = persistReducer(persistConfig, combineReducers({
+const rootReducer = combineReducers({
   products: productsReducer,
-}));
+  // Add more reducers here if needed
+});
 
-export const Store = configureStore({
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+export const store = configureStore({
   reducer: persistedReducer,
 });
 
-export type RootStore = ReturnType<typeof Store.getState>;
-export const persistor = persistStore(Store);
-
+export type RootStore = ReturnType<typeof store.getState>;
+export const persistor = persistStore(store);
 
 
 /*import { configureStore } from "@reduxjs/toolkit";
