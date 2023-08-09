@@ -14,7 +14,7 @@ const ProductList: React.FC = () => {
 
   return (
     <div>
-      {products.length > 0 && (
+      {products && (
         products.map((product:Product) => (
           <Link to={`/products/detail/${product.id}`} key={product.id}>
             <h3>{product.name}</h3>
@@ -22,7 +22,8 @@ const ProductList: React.FC = () => {
             <br/>
           </Link>
         ))
-      ) }
+      )
+    }
     </div>
   );
 };

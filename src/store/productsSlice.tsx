@@ -6,6 +6,7 @@ import { Product } from '../types';
 interface ProductsState {
   allProducts: Product[],
   products: Product[];
+  cartItems: Product[]
   loading: 'idle' | 'pending' | 'fulfilled' | 'rejected';
   error: string | null;
 }
@@ -13,6 +14,7 @@ interface ProductsState {
 const initialState: ProductsState = {
   allProducts: [],
   products: [],
+  cartItems: [],
   loading: 'idle',
   error: null,
 };
@@ -43,6 +45,9 @@ const productsSlice = createSlice({
         product.id == searchQuery
       )
     },
+    addToCart: (state, action) => {
+      state.cartItems = action.payload; // Set cartItems to the entire array
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -60,6 +65,7 @@ const productsSlice = createSlice({
   },
 });
 
-export const { filterProductsByLetter, filterProductsById} = productsSlice.actions;
+export const { filterProductsByLetter, filterProductsById, addToCart} = productsSlice.actions;
 export default productsSlice.reducer;
 export const selectProducts = (state: RootStore) => state.products.products;
+export const selectCartProducts = (state: RootStore) => state.products.cartItems;
