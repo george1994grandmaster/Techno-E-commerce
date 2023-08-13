@@ -1,21 +1,20 @@
 import { useEffect, useState, FC } from 'react';
-import { useParams } from 'react-router-dom';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectProducts,  selectCartProducts} from '../store/productsSlice';
+import { selectProducts, selectCartProducts} from '../store/productsSlice';
 import { filterProductsById, addToCart, removeFromCart } from "../store/productsSlice";
-import { useNavigate } from 'react-router-dom';
 import { Product } from '../types';
 
 
 const SelectProduct: FC = () => {
-  const navigate = useNavigate();
   const { productId } = useParams<{ productId: string }>(); 
   const products = useSelector(selectProducts);
   const cartItems = useSelector(selectCartProducts);
   const dispatch = useDispatch<any>();
+  const navigate = useNavigate();
  
   useEffect(() => {
-    dispatch(filterProductsById(productId) as any);
+    dispatch(filterProductsById(productId));
   }, [dispatch, productId]);
 
   useEffect(() => {
@@ -27,14 +26,14 @@ const SelectProduct: FC = () => {
 
   const [isInCart, setIsInCart] = useState(false);
 
-  const addToCartHandler = (product: any) => {
+
+  const addProductHandler = (product: Product) => {
     dispatch(addToCart(product));
-    navigate(`/shopping`);
+    navigate('/shopping')
   };
 
-  const removeCartHandler = (product: any) => {
-    dispatch(removeFromCart(product.id));
-    navigate(`/shopping`);
+  const removeCartHandler = (productId: number) => {
+    dispatch(removeFromCart(productId));
   }
 
   return (
@@ -44,10 +43,10 @@ const SelectProduct: FC = () => {
           <h3>{products[0].name}</h3>
           <h3>{products[0].price}</h3>
           <br />
-          <button onClick={() => addToCartHandler(products[0])}>add to bag</button>
+          <button onClick={() => addProductHandler(products[0])}>add to bag</button>
 
           {isInCart ? (
-            <button onClick={() => removeCartHandler(products[0])} style={{ backgroundColor: 'red' }}>
+            <button onClick={() => removeCartHandler(products[0].id)} style={{ backgroundColor: 'red' }}>
               Remove from Bag
             </button>
           ) : (

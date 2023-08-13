@@ -5,6 +5,7 @@ import { Product } from '../types';
 
 interface ProductsState {
   allProducts: Product[],
+  productCount: Product[],
   products: Product[];
   cartItems: Product[]
   loading: 'idle' | 'pending' | 'fulfilled' | 'rejected';
@@ -13,6 +14,7 @@ interface ProductsState {
 
 const initialState: ProductsState = {
   allProducts: [],
+  productCount: [],
   products: [],
   cartItems: [],
   loading: 'idle',
@@ -46,17 +48,35 @@ const productsSlice = createSlice({
       );
     },
     addToCart: (state, action) => {
-      const newItem = action.payload;
+      const newItem = { ...action.payload, price: action.payload.price * 2 };
       state.cartItems = [...state.cartItems, newItem];
-      console.log(state.cartItems)
-      //state.cartItems= [];
-      //localStorage.setItem('selectedProduct', JSON.stringify(action.payload));
+      console.log(newItem.price)
     },
 
+    decreaseProduct: (state, action) => {
+      const productIndex = state.cartItems.findIndex(item => item.id === action.payload);
+        if (productIndex !== -1) {
+          const updatedCart = [...state.cartItems];
+          updatedCart.splice(productIndex, 1);
+          state.cartItems = updatedCart;
+        }
+      },
+
+    /*decreaseProduct: (state, action) => {
+      const productIndex = state.cartItems.findIndex(item => item.id === action.payload);
+        if (productIndex !== -1) {
+          const updatedCart = [...state.cartItems];
+          //if (updatedCart[productIndex].quantity) {
+            //console.log("ok" )
+            //updatedCart[productIndex].quantity--; // Decrease the quantity by 1
+          //} else {
+            updatedCart.splice(productIndex, 1); // Remove the product if quantity is 1
+          //}
+        state.cartItems = updatedCart;
+      }
+    },*/
     removeFromCart: (state, action) => {
-      state.cartItems = state.cartItems.filter(item => item.id != action.payload);
-      console.log(state.cartItems);
-      console.log(state.cartItems.length);
+      state.cartItems = state.cartItems.filter(item => item.id !== action.payload);
     },
   },
   extraReducers: (builder) => {
@@ -75,7 +95,8 @@ const productsSlice = createSlice({
   },
 });
 
-export const { filterProductsByLetter, filterProductsById, addToCart, removeFromCart} = productsSlice.actions;
+export const { filterProductsByLetter, filterProductsById, addToCart, decreaseProduct, removeFromCart} = productsSlice.actions;
 export default productsSlice.reducer;
 export const selectProducts = (state: RootStore) => state.products.products;
 export const selectCartProducts = (state: RootStore) => state.products.cartItems;
+export const selectProductCount = (state: RootStore) => state.products.productCount;
