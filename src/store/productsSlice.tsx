@@ -5,7 +5,7 @@ import { Product } from '../types';
 
 interface ProductsState {
   allProducts: Product[],
-  productCount: Product[],
+  productQuantities: { [key: number]: number };
   products: Product[];
   cartItems: Product[]
   loading: 'idle' | 'pending' | 'fulfilled' | 'rejected';
@@ -14,7 +14,7 @@ interface ProductsState {
 
 const initialState: ProductsState = {
   allProducts: [],
-  productCount: [],
+  productQuantities: {},
   products: [],
   cartItems: [],
   loading: 'idle',
@@ -48,36 +48,25 @@ const productsSlice = createSlice({
       );
     },
     addToCart: (state, action) => {
-      const newItem = { ...action.payload, price: action.payload.price * 2 };
+      const newItem = { ...action.payload };
       state.cartItems = [...state.cartItems, newItem];
-      console.log(newItem.price)
+      //state.productQuantities[newItem.id] = (state.productQuantities[newItem.id] || 0) + 1;
     },
-
     decreaseProduct: (state, action) => {
-      const productIndex = state.cartItems.findIndex(item => item.id === action.payload);
-        if (productIndex !== -1) {
-          const updatedCart = [...state.cartItems];
-          updatedCart.splice(productIndex, 1);
-          state.cartItems = updatedCart;
-        }
-      },
-
-    /*decreaseProduct: (state, action) => {
-      const productIndex = state.cartItems.findIndex(item => item.id === action.payload);
-        if (productIndex !== -1) {
-          const updatedCart = [...state.cartItems];
-          //if (updatedCart[productIndex].quantity) {
-            //console.log("ok" )
-            //updatedCart[productIndex].quantity--; // Decrease the quantity by 1
-          //} else {
-            updatedCart.splice(productIndex, 1); // Remove the product if quantity is 1
-          //}
+      const productId = action.payload;
+      const productIndex = state.cartItems.findIndex(item => item.id === productId);
+      if (productIndex !== -1) {
+        const updatedCart = [...state.cartItems];
+        updatedCart.splice(productIndex, 1);
         state.cartItems = updatedCart;
+        //state.productQuantities[productId] = Math.max(0, (state.productQuantities[productId] || 1) - 1);
       }
-    },*/
-    removeFromCart: (state, action) => {
-      state.cartItems = state.cartItems.filter(item => item.id !== action.payload);
     },
+    removeFromCart: (state, action) => {
+      const productId = action.payload;
+      const productIndex = state.cartItems.findIndex(item => item.id === productId);
+      state.cartItems = state.cartItems.filter(item => item.id !== action.payload);
+    }
   },
   extraReducers: (builder) => {
     builder
@@ -99,4 +88,4 @@ export const { filterProductsByLetter, filterProductsById, addToCart, decreasePr
 export default productsSlice.reducer;
 export const selectProducts = (state: RootStore) => state.products.products;
 export const selectCartProducts = (state: RootStore) => state.products.cartItems;
-export const selectProductCount = (state: RootStore) => state.products.productCount;
+export const selectProductQuantities = (state: RootStore) => state.products.productQuantities;

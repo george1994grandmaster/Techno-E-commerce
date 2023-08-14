@@ -3,31 +3,31 @@
     {
       "id": 1,
       "name": "computer",
-      "price": 25.99,
+      "price": 20,
       "productId": 1
     },
     {
       "id": 2,
       "name": "phone",
-      "price": 19.95,
+      "price": 10,
       "productId": 2
     },
     {
       "id": 3,
       "name": "tablet",
-      "price": 15.78,
+      "price": 30,
       "productId": 3
     },
     {
       "id": 4,
       "name": "laptop",
-      "price": 19.95,
+      "price": 40,
       "productId": 4
     },
     {
       "id": 5,
       "name": "phone",
-      "price": 34.78,
+      "price": 50,
       "productId": 2
     }
   ]
