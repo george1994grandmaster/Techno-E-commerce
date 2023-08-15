@@ -1,18 +1,13 @@
-import React, {useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addToCart, decreaseProduct, selectCartProducts, removeFromCart, selectProductQuantities } from '../store/productsSlice'; // Make sure to import the selector
-
+import { addToCart, decreaseFromCart, selectCartProducts, removeFromCart, selectProductQuantities } from '../store/productsSlice'; // Make sure to import the selector
 import { Product } from '../types';
 
 const ShoppingCart: React.FC = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector(selectCartProducts);
-  const productQuantities = useSelector(selectProductQuantities);
   
-  // Use the selector to get the product quantities
-
-  const removeCartHandler = (product: Product) => {
-    dispatch(removeFromCart(product.id));
+  const removeCartHandler = (productId: number) => {
+    dispatch(removeFromCart(productId));
   }
 
   const addProductHandler = (product: Product) => {
@@ -20,41 +15,26 @@ const ShoppingCart: React.FC = () => {
   }
 
   const decreaseProductHandler = (productId: number) => {
-    dispatch(decreaseProduct(productId));
+    dispatch(decreaseFromCart(productId));
   }
-
-  const uniqueCartItems: Product[] = [];
-  cartItems.forEach((item) => {
-    if (!uniqueCartItems.some((i) => i.id === item.id)) {
-      uniqueCartItems.push(item);
-    }
-  });
-
-  console.log(uniqueCartItems)
 
   return (
     <div>
       <h2>Cart Items</h2>
-      <ul>
-        {uniqueCartItems.map((item: Product) => {
-          const itemCount = cartItems.filter(cartItem => cartItem.id === item.id);
-          const cartItemContent = (
-            
-            <li key={item.id}>
-              <p>{item.name}</p>
-              <p>{item.price}</p>
-              <p>Price: {item.price * productQuantities[item.id]}</p> {/* Display the product quantity */}
-              <button onClick={() => removeCartHandler(item)} style={{ backgroundColor: 'red' }}>
-                Remove from Bag
-              </button>
-              <button onClick={() => addProductHandler(item)}>+</button>
-              <button onClick={() => decreaseProductHandler(item.id)}>-</button>
-              <span>{itemCount.length}</span> {/* Display the count for each product */}
-            </li>
-          );
-          return cartItemContent;
-        })}
-      </ul>
+      <div>
+      {cartItems.map((item: Product) => (
+        <div key={item.id}>
+          <p>{item.name}</p>
+          <p>{item.totalPrice}</p>
+          <button onClick={() => removeCartHandler(item.id)} style={{ backgroundColor: 'red' }}>
+            Remove from Bag
+          </button>
+          <button onClick={() => addProductHandler(item)}>+</button>
+          <button onClick={() => decreaseProductHandler(item.id)}>-</button>
+          <span>{item.quantity}</span>
+        </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -5,7 +5,6 @@ import { selectProducts, selectCartProducts} from '../store/productsSlice';
 import { filterProductsById, addToCart, removeFromCart } from "../store/productsSlice";
 import { Product } from '../types';
 
-
 const SelectProduct: FC = () => {
   const { productId } = useParams<{ productId: string }>(); 
   const products = useSelector(selectProducts);
@@ -26,11 +25,10 @@ const SelectProduct: FC = () => {
 
   const [isInCart, setIsInCart] = useState(false);
 
-
   const addProductHandler = (product: Product) => {
     dispatch(addToCart(product));
-    navigate('/shopping')
-  };
+    navigate('/shopping');
+  }
 
   const removeCartHandler = (productId: number) => {
     dispatch(removeFromCart(productId));

@@ -2,15 +2,9 @@ import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { RootStore } from './store';
 import { Product } from '../types';
+import { ProductsState } from '../types';
 
-interface ProductsState {
-  allProducts: Product[],
-  productQuantities: { [key: number]: number };
-  products: Product[];
-  cartItems: Product[]
-  loading: 'idle' | 'pending' | 'fulfilled' | 'rejected';
-  error: string | null;
-}
+
 
 const initialState: ProductsState = {
   allProducts: [],
@@ -48,18 +42,25 @@ const productsSlice = createSlice({
       );
     },
     addToCart: (state, action) => {
-      const newItem = { ...action.payload };
-      state.cartItems = [...state.cartItems, newItem];
-      //state.productQuantities[newItem.id] = (state.productQuantities[newItem.id] || 0) + 1;
+      const newItem = { ...action.payload }; 
+      const existingItemIndex = state.cartItems.findIndex(item => item.id === newItem.id);
+      if (existingItemIndex !== -1 ) {
+        if(state.cartItems[existingItemIndex].quantity < 10){
+          state.cartItems[existingItemIndex].quantity += 1;
+          state.cartItems[existingItemIndex].totalPrice += state.cartItems[existingItemIndex].price;
+        }
+      } else {
+          newItem.quantity = newItem.quantity || 1; 
+          newItem.totalPrice = newItem.price; 
+          state.cartItems = [ newItem, ...state.cartItems ];
+        }
     },
-    decreaseProduct: (state, action) => {
-      const productId = action.payload;
-      const productIndex = state.cartItems.findIndex(item => item.id === productId);
-      if (productIndex !== -1) {
-        const updatedCart = [...state.cartItems];
-        updatedCart.splice(productIndex, 1);
-        state.cartItems = updatedCart;
-        //state.productQuantities[productId] = Math.max(0, (state.productQuantities[productId] || 1) - 1);
+    decreaseFromCart: (state, action) => {
+      const newItemId = action.payload; 
+      const existingItemIndex = state.cartItems.findIndex(item => item.id === newItemId);
+      if (existingItemIndex !== -1 && state.cartItems[existingItemIndex].quantity > 1) {
+        state.cartItems[existingItemIndex].quantity -= 1;
+        state.cartItems[existingItemIndex].totalPrice -= state.cartItems[existingItemIndex].price;
       }
     },
     removeFromCart: (state, action) => {
@@ -84,7 +85,7 @@ const productsSlice = createSlice({
   },
 });
 
-export const { filterProductsByLetter, filterProductsById, addToCart, decreaseProduct, removeFromCart} = productsSlice.actions;
+export const { filterProductsByLetter, filterProductsById, addToCart, decreaseFromCart, removeFromCart} = productsSlice.actions;
 export default productsSlice.reducer;
 export const selectProducts = (state: RootStore) => state.products.products;
 export const selectCartProducts = (state: RootStore) => state.products.cartItems;
