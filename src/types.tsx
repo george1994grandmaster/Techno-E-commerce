@@ -16,3 +16,9 @@ export interface Product {
   quantity: number;
   totalPrice: number;
 }
+
+export interface Form {
+  formType: string;
+  loading: 'idle' | 'pending' | 'fulfilled' | 'rejected';
+  error: string | null;
+}

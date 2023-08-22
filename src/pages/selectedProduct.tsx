@@ -9,22 +9,25 @@ const SelectProduct: FC = () => {
   const { productId } = useParams<{ productId: string }>(); 
   const products = useSelector(selectProducts);
   const cartItems = useSelector(selectCartProducts);
-  const dispatch = useDispatch<any>();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
  
   useEffect(() => {
-    dispatch(filterProductsById(productId));
+    if (productId) {
+      dispatch(filterProductsById(parseInt(productId)));
+    }
   }, [dispatch, productId]);
 
   useEffect(() => {
     if (productId) {
-      const checkIsInCart = cartItems.some((item) => item.id === parseInt(productId));
+      const checkIsInCart = cartItems.some((item: Product) => item.id === parseInt(productId));
       setIsInCart(checkIsInCart); 
     }
   }, [cartItems, productId]);
 
-  const [isInCart, setIsInCart] = useState(false);
-
+  const [isInCart, setIsInCart] = useState<boolean>(false);
+  
+  
   const addProductHandler = (product: Product) => {
     dispatch(addToCart(product));
     navigate('/shopping');
@@ -42,7 +45,6 @@ const SelectProduct: FC = () => {
           <h3>{products[0].price}</h3>
           <br />
           <button onClick={() => addProductHandler(products[0])}>add to bag</button>
-
           {isInCart ? (
             <button onClick={() => removeCartHandler(products[0].id)} style={{ backgroundColor: 'red' }}>
               Remove from Bag

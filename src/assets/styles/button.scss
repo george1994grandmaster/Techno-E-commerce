@@ -1,0 +1,50 @@
+
+.form-btn-content {
+  display: inline-block;
+  min-width: 150px;
+
+  .MuiTypography-root {
+    margin-bottom: 0 !important;
+  }
+
+  button {
+   width: 100% !important;
+  }
+}
+
+.option-btn-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 35px;
+  border-bottom: 1px solid #ddd;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 47%;
+    height: 2px;
+    background-color: $dark;
+    transition: all 0.3s ease;
+  }
+
+  &.left:before {
+    left: 0; /* Position when active */
+  }
+
+  &.right:before {
+    left: 53%; /* Position when active */
+  }
+}
+
+.option-btn-content {
+  width: 47%;
+  
+  button {
+    width: 100% !important;
+   //border-bottom: 2px solid $dark;
+  }
+}

@@ -1,0 +1,44 @@
+@import './globalStyles';
+@import './variables';
+@import './form';
+@import './button';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Varela,sans-serif !important;
+}
+
+.container {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+input::placeholder {
+  color: dark;
+  font-weight: 500;
+}
+
+.center-wrapper {
+  width: 100%;
+  background-color: $grey;
+}
+
+.dark {
+  color: $dark;
+}

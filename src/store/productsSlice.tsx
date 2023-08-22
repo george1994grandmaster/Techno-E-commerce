@@ -4,8 +4,6 @@ import { RootStore } from './store';
 import { Product } from '../types';
 import { ProductsState } from '../types';
 
-
-
 const initialState: ProductsState = {
   allProducts: [],
   productQuantities: {},
@@ -29,19 +27,19 @@ const productsSlice = createSlice({
   name: 'products',
   initialState,
   reducers: {
-    filterProductsByLetter: (state, action) => {
+    filterProductsByLetter: (state, action: PayloadAction<string>) => {
       const searchQuery = action.payload.toLowerCase();
       state.products = state.allProducts.filter(product =>
         product.name.toLowerCase().includes(searchQuery)
       );
     },
-    filterProductsById: (state, action) => {
+    filterProductsById: (state, action: PayloadAction<number>) => {
       const searchQuery = action.payload;
       state.products = state.allProducts.filter(product =>
         product.id == searchQuery
       );
     },
-    addToCart: (state, action) => {
+    addToCart: (state, action: PayloadAction<Product>) => {
       const newItem = { ...action.payload }; 
       const existingItemIndex = state.cartItems.findIndex(item => item.id === newItem.id);
       if (existingItemIndex !== -1 ) {
@@ -51,11 +49,12 @@ const productsSlice = createSlice({
         }
       } else {
           newItem.quantity = newItem.quantity || 1; 
-          newItem.totalPrice = newItem.price; 
+          newItem.totalPrice = newItem.price * newItem.quantity; 
           state.cartItems = [ newItem, ...state.cartItems ];
+          console.log(898)
         }
     },
-    decreaseFromCart: (state, action) => {
+    decreaseFromCart: (state, action: PayloadAction<number>) => {
       const newItemId = action.payload; 
       const existingItemIndex = state.cartItems.findIndex(item => item.id === newItemId);
       if (existingItemIndex !== -1 && state.cartItems[existingItemIndex].quantity > 1) {
@@ -63,7 +62,7 @@ const productsSlice = createSlice({
         state.cartItems[existingItemIndex].totalPrice -= state.cartItems[existingItemIndex].price;
       }
     },
-    removeFromCart: (state, action) => {
+    removeFromCart: (state, action: PayloadAction<number>) => {
       const productId = action.payload;
       const productIndex = state.cartItems.findIndex(item => item.id === productId);
       state.cartItems = state.cartItems.filter(item => item.id !== action.payload);

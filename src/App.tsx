@@ -4,6 +4,7 @@ import ProductList from './pages/home';
 import ShoppingCart from './pages/shopping';
 import SelectProduct from './pages/selectedProduct';
 import SearchProduct from './pages/searchedProduct';
+import Form from './components/forms/auth';
 
 const App = () => {
   return (
@@ -18,6 +19,9 @@ const App = () => {
             <Route path=":productQuery" element={<SearchProduct />} />
           </Route>
           <Route path="/shopping" element={<ShoppingCart/>} />
+          <Route path="/auth/" element={<Form />}>
+            <Route path=":signup" element={<Form />} />
+          </Route>
         </Route>
       </Routes>
     </Router>
