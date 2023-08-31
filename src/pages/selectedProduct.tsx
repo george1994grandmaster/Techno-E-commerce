@@ -1,8 +1,7 @@
 import { useEffect, useState, FC } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectProducts, selectCartProducts} from '../store/productsSlice';
-import { filterProductsById, addToCart, removeFromCart } from "../store/productsSlice";
+import { selectProducts, selectCartProducts, filterProductsById, addToCart, removeFromCart} from '../store/productsSlice';
 import { Product } from '../types';
 
 const SelectProduct: FC = () => {

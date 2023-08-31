@@ -8,6 +8,7 @@ const initialState: ProductsState = {
   allProducts: [],
   productQuantities: {},
   products: [],
+  searchedProducts: [],
   cartItems: [],
   loading: 'idle',
   error: null,
@@ -29,7 +30,7 @@ const productsSlice = createSlice({
   reducers: {
     filterProductsByLetter: (state, action: PayloadAction<string>) => {
       const searchQuery = action.payload.toLowerCase();
-      state.products = state.allProducts.filter(product =>
+      state.searchedProducts = state.allProducts.filter(product =>
         product.name.toLowerCase().includes(searchQuery)
       );
     },
@@ -51,7 +52,6 @@ const productsSlice = createSlice({
           newItem.quantity = newItem.quantity || 1; 
           newItem.totalPrice = newItem.price * newItem.quantity; 
           state.cartItems = [ newItem, ...state.cartItems ];
-          console.log(898)
         }
     },
     decreaseFromCart: (state, action: PayloadAction<number>) => {
@@ -76,7 +76,8 @@ const productsSlice = createSlice({
       .addCase(fetchProducts.fulfilled, (state, action: PayloadAction<Product[]>) => {
         state.loading = 'fulfilled';
         state.allProducts = action.payload;
-        state.products = action.payload;
+        //state.products = action.payload;
+        //state.products = []
       })
       .addCase(fetchProducts.rejected, (state) => {
         state.loading = 'rejected';
@@ -86,6 +87,8 @@ const productsSlice = createSlice({
 
 export const { filterProductsByLetter, filterProductsById, addToCart, decreaseFromCart, removeFromCart} = productsSlice.actions;
 export default productsSlice.reducer;
+export const selectAllProducts = (state: RootStore) => state.products.allProducts;
+export const selectSearchedProduts = (state: RootStore) => state.products.searchedProducts;
 export const selectProducts = (state: RootStore) => state.products.products;
 export const selectCartProducts = (state: RootStore) => state.products.cartItems;
 export const selectProductQuantities = (state: RootStore) => state.products.productQuantities;

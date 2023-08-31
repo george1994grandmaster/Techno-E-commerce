@@ -3,7 +3,7 @@ import Layout from './pages/layout';
 import ProductList from './pages/home'; 
 import ShoppingCart from './pages/shopping';
 import SelectProduct from './pages/selectedProduct';
-import SearchProduct from './pages/searchedProduct';
+import SearchProducts from './pages/searchProducts';
 import Form from './components/forms/auth';
 
 const App = () => {
@@ -14,9 +14,8 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<ProductList />} />
           <Route path="/products/*">
-            <Route index element={<ProductList />} />
             <Route path="detail/:productId" element={<SelectProduct />} />
-            <Route path=":productQuery" element={<SearchProduct />} />
+            <Route path=":productQuery" element={<SearchProducts/>} />
           </Route>
           <Route path="/shopping" element={<ShoppingCart/>} />
           <Route path="/auth/" element={<Form />}>

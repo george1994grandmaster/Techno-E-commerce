@@ -1,0 +1,17 @@
+.card {
+  margin-bottom: 50px;
+  padding: 15px 20px;
+
+  &:hover {
+    //border: 1px solid $dark;
+  }
+  
+  img {
+    height: 14vw;
+    object-fit: scale-down;
+  }
+}
+
+.card-body {
+  padding: 15px;
+}

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Container } from '@mui/material';
 import { StyledTextField, StyledInputLabel, CustomFormControl, StyledTypography } from '../material_Ui';
-import MainBtn from '../mainButton';
+import Button from '../button';
 
 const LoginForm: FC = () => {
   return (
@@ -25,14 +25,14 @@ const LoginForm: FC = () => {
           </CustomFormControl>
         </div>
         <div className="form-col">
-          <div className="form-btn-content">
-            <MainBtn text="LOG IN" bgColor="#00381f" color="#fff" innerSpacing="10px 15px"/>
+          <div className="btn-content">
+            <Button text="LOG IN" bgColor="#00381f" color="#fff" innerSpacing="10px 15px"/>
           </div>
         </div>
       </form>
-      <p className="text form-warning-text">
+      <StyledTypography variant="body1" fontSize="15px" fontWeight="500" color= "rgba(0, 0, 0, 0.88)">
         This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply
-      </p>
+      </StyledTypography>
     </Container>
   );
 };

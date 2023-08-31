@@ -1,24 +1,31 @@
 
-export interface ProductsState {
+export interface Condition {
+  loading: 'idle' | 'pending' | 'fulfilled' | 'rejected';
+  error: string | null;
+} 
+
+
+export interface ProductsState extends Condition {
   allProducts: Product[],
   productQuantities: { [key: number]: number };
   products: Product[];
+  searchedProducts: Product[];
   cartItems: Product[]
-  loading: 'idle' | 'pending' | 'fulfilled' | 'rejected';
-  error: string | null;
 }
 
 export interface Product {
   id: number;
   name: string;
   price: number;
-  userId: number;
   quantity: number;
   totalPrice: number;
+  src: string;
 }
 
-export interface Form {
+export interface Form extends Condition {
   formType: string;
-  loading: 'idle' | 'pending' | 'fulfilled' | 'rejected';
-  error: string | null;
+}
+
+export interface ContentValue extends Condition {
+  contentValue: string;
 }

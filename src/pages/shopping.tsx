@@ -1,10 +1,20 @@
+import React, { FC, useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCart, decreaseFromCart, selectCartProducts, removeFromCart, selectProductQuantities } from '../store/productsSlice'; // Make sure to import the selector
 import { Product } from '../types';
 
-const ShoppingCart: React.FC = () => {
+const ShoppingCart: FC = () => {
+
   const dispatch = useDispatch();
   const cartItems = useSelector(selectCartProducts);
+  const [totalProductPrice, setTotalProductPrice] = useState<number>(0); 
+
+  useEffect(() => {
+    const totalProductPrice = cartItems.reduce((accumulator, currentItem) => {
+      return accumulator + currentItem.totalPrice;
+    }, 0);
+    setTotalProductPrice(totalProductPrice);
+  }, [cartItems]); 
   
   const removeCartHandler = (productId: number) => {
     dispatch(removeFromCart(productId));
@@ -35,6 +45,7 @@ const ShoppingCart: React.FC = () => {
         </div>
         ))}
       </div>
+      <p>Total Price: {totalProductPrice}</p>
     </div>
   );
 };

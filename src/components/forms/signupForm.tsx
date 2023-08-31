@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 import { Container } from '@mui/material';
 import { StyledTextField, StyledInputLabel, CustomFormControl, StyledTypography } from '../material_Ui';
 import Checkbox from '@mui/material/Checkbox';
-import MainBtn from '../mainButton';
+import Button from '../button';
 
 const RegisterForm: FC = () => {
 
@@ -35,7 +35,7 @@ const RegisterForm: FC = () => {
         <div style={{marginBottom: "24px"}}>
           <StyledInputLabel htmlFor="password-input">Password</StyledInputLabel>
           <CustomFormControl>
-            <StyledTextField fullWidth type="password" variant="outlined" placeholder="Password-id" />
+            <StyledTextField fullWidth type="password" variant="outlined" placeholder="Password" />
           </CustomFormControl>
         </div>
         <div style={{marginBottom: "24px"}}>
@@ -45,11 +45,11 @@ const RegisterForm: FC = () => {
           </CustomFormControl>
         </div>
         <div className="form-col">
-          <p className="text form-info-text">
+          <StyledTypography variant="body1" fontSize="15px" fontWeight="500" color= "rgba(0, 0, 0, 0.88)" className="mb-5">
             We would like to send you marketing information about our products and services
             using email, text, telephone or post. We may also use your information to deliver personalised
             messages or advertising on social media or other digital platforms. You can ask us to stop marketing at any time. For further information about how we use your personal information, please see our Privacy Policy. If you wish to opt-out of receiving marketing information, please click here.
-          </p>
+          </StyledTypography>
           <StyledInputLabel className="checkbox-content">
             <Checkbox
               checked={checked}
@@ -58,8 +58,8 @@ const RegisterForm: FC = () => {
             />
             <span className="text checkbox-text dark">I do not wish to receive marketing information about your products and services.</span>
           </StyledInputLabel>
-          <div className='form-btn-content'>
-            <MainBtn text="CREATE ACCOUNT" bgColor="#00381f" color="#fff" innerSpacing="10px 15px"/>
+          <div className="btn-content">
+            <Button text="CREATE ACCOUNT" bgColor="#00381f" color="#fff" innerSpacing="10px 15px"/>
           </div>
         </div>
       </form>

@@ -22,9 +22,10 @@ const CustomFormControl = styled(FormControl)({
   marginTop: "0",
 });
 
-const StyledTypography = styled(Typography)<{ fontSize:string, fontWeight: string }>(({ fontSize, fontWeight }) => ({
+const StyledTypography = styled(Typography)<{ fontSize:string, fontWeight: string, color?: string }>(({ fontSize, fontWeight, color }) => ({
   fontSize, 
   fontWeight,
+  color,
 }));
 
 

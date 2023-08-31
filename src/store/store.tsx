@@ -3,6 +3,8 @@ import { persistStore, persistReducer,  FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE,
 import storage from 'redux-persist/lib/storage';
 import productsReducer from './productsSlice';
 import formReducer from './formSlice';
+import topContentReducer from './topContentSlice';
+
 
 const persistConfig = {
   key: 'root',
@@ -13,6 +15,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
   products: productsReducer,
   form: formReducer,
+  topContent: topContentReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

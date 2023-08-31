@@ -2,33 +2,76 @@
   "products": [
     {
       "id": 1,
-      "name": "computer",
-      "price": 20
-      
+      "name": "Rolex Submariner",
+      "price": 20,
+      "src": "/img/rolex-submariner.png" 
     },
     {
       "id": 2,
-      "name": "phone",
-      "price": 10
+      "name": "Omega Speedmaster",
+      "price": 10,
+      "src": "/img/omega-speedmaster.png"
      
     },
     {
       "id": 3,
-      "name": "tablet",
-      "price": 30
-      
+      "name": "Vacheron Constantin",
+      "price": 30,
+      "src": "/img/vacheron-Constantin.png" 
     },
     {
       "id": 4,
-      "name": "laptop",
-      "price": 40
-      
+      "name": "Tag Heuer Carrera",
+      "price": 40,
+      "src": "/img/tag-heuer-carrera.png" 
     },
     {
       "id": 5,
-      "name": "phone",
-      "price": 50
-      
+      "name": "Patek Philippe",
+      "price": 50,
+      "src": "/img/patek-philippe.png" 
+    },
+    {
+      "id": 6,
+      "name": "Audemars Piguet",
+      "price": 50,
+      "src": "/img/audemars-piguet-royal-oak.png"  
+    },
+    {
+      "id": 7,
+      "name": "Breitling-Navitimer B01",
+      "price": 50,
+      "src": "/img/breitling-navitimer.png"  
+    },
+    {
+      "id": 8,
+      "name": "IWC Portugies",
+      "price": 50,
+      "src": "/img/IWC-portugies.png"  
+    },
+    {
+      "id": 9,
+      "name": "Seiko Prospex.png",
+      "price": 50,
+      "src": "/img/seiko-prospex.png"  
+    },
+    {
+      "id": 10,
+      "name": "Tudor Black Bay Ceramic",
+      "price": 50,
+      "src": "/img/tudor-black-bay-ceramic.png"  
+    },
+    {
+      "id": 11,
+      "name": "Omega De Ville",
+      "price": 50,
+      "src": "/img/omega-de-ville.png"  
+    },
+    {
+      "id": 12,
+      "name": "IWC Portofino",
+      "price": 50,
+      "src": "/img/iwc-portofino.png"  
     }
   ]
 }
