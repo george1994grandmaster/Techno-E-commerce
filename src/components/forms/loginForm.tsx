@@ -15,13 +15,13 @@ const LoginForm: FC = () => {
         <div className="form-col">
           <StyledInputLabel htmlFor="email-input">Email address</StyledInputLabel>
           <CustomFormControl>
-            <StyledTextField fullWidth type="email" placeholder="Email address" variant="outlined" id="email-input" />
+            <StyledTextField inputSpace="15px" fullWidth type="email" placeholder="Email address" variant="outlined" id="email-input" />
           </CustomFormControl>
         </div>
         <div className="form-col" >
           <StyledInputLabel htmlFor="password-input">Password</StyledInputLabel>
           <CustomFormControl>
-            <StyledTextField fullWidth type="password" placeholder='Password' variant="outlined" id="password-input" />
+            <StyledTextField inputSpace="15px" fullWidth type="password" placeholder='Password' variant="outlined" id="password-input" />
           </CustomFormControl>
         </div>
         <div className="form-col">

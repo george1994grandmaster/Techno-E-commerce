@@ -23,25 +23,25 @@ const RegisterForm: FC = () => {
         <div style={{marginBottom: "24px"}}>
           <StyledInputLabel htmlFor="email-input">Full name</StyledInputLabel>
           <CustomFormControl>
-            <StyledTextField fullWidth variant="outlined" placeholder="full name" id="full-name-input" />
+            <StyledTextField inputSpace="15px" fullWidth variant="outlined" placeholder="full name" id="full-name-input" />
           </CustomFormControl>
         </div>
         <div style={{marginBottom: "24px"}}>
           <StyledInputLabel htmlFor="password-input">Email address</StyledInputLabel>
           <CustomFormControl>
-            <StyledTextField fullWidth type="email" variant="outlined" placeholder="Email address" id="email-input" />
+            <StyledTextField inputSpace="15px" fullWidth type="email" variant="outlined" placeholder="Email address" id="email-input" />
           </CustomFormControl>
         </div>
         <div style={{marginBottom: "24px"}}>
           <StyledInputLabel htmlFor="password-input">Password</StyledInputLabel>
           <CustomFormControl>
-            <StyledTextField fullWidth type="password" variant="outlined" placeholder="Password" />
+            <StyledTextField inputSpace="15px" fullWidth type="password" variant="outlined" placeholder="Password" />
           </CustomFormControl>
         </div>
         <div style={{marginBottom: "24px"}}>
           <StyledInputLabel htmlFor="confirm-password-input">Confirm Password</StyledInputLabel>
           <CustomFormControl>
-            <StyledTextField fullWidth type="password" variant="outlined" placeholder="Password Confirm" id="confirm-password-input" />
+            <StyledTextField inputSpace="15px" fullWidth type="password" variant="outlined" placeholder="Password Confirm" id="confirm-password-input" />
           </CustomFormControl>
         </div>
         <div className="form-col">

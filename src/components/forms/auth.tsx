@@ -23,7 +23,7 @@ const Form: FC = () => {
     <div>
       <div className="container">
         <div className="d-flex jc-center">
-          <div className="xs-12 lg-6">
+          <div className="xs-12 sm-9 lg-6">
             <div className={`option-btn-layout ${formType === 'log in' ? 'left' : 'right'}`}>
               <div className="option-btn-content">
                 <MainBtn text="Log In" bgColor="transparent" color="#00381f" innerSpacing="10px 15px" onClick={() => selectFormHandle("log in")}/>

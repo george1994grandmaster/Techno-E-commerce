@@ -76,6 +76,12 @@ export const SearchIcon: FC = () => {
   )
 }
 
+export const UserIcon: FC = () => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17.819" viewBox="0 0 17 17.819"><g id="User" transform="translate(0.5 0.5)"><path id="Path_21" data-name="Path 21" d="M22,28.36V26.406A3.954,3.954,0,0,0,18,22.5H10a3.954,3.954,0,0,0-4,3.906V28.36" transform="translate(-6 -11.541)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path id="Path_22" data-name="Path 22" d="M19.036,8.018A3.518,3.518,0,1,1,15.518,4.5a3.518,3.518,0,0,1,3.518,3.518Z" transform="translate(-7.518 -4.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path></g></svg>
+  )
+}
+
 
 
 
