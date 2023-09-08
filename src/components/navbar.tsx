@@ -6,7 +6,7 @@ import { NavbarLogo } from "./svgFormat";
 import SearchBar from "./searchBar";
 import Cart from "./cart";
 import Button from "./button";
-import { UserIcon } from "./svgFormat";
+import { UserIcon, CartIcon } from "./svgFormat";
 
 const Header: FC = () => {
 
@@ -42,9 +42,11 @@ const Header: FC = () => {
         </div>
         <div style={{width: "1px", height: "50px", backgroundColor: "rgb(0, 56, 31)"}}></div>
         <div className="col-05">
-          <Cart />
+          <div className="d-flex jc-center p-relative ai-center" style={{height: "100%", display: "block", maxWidth: "63px"}}>
+            <Button svg={<CartIcon/>} height="100%" innerSpacing="10px 15px" onClick={() => handleNavigate()}/>
+            <Cart/>
+          </div>
         </div>
-        
       </div>
     </div>
   )

@@ -10,10 +10,11 @@ interface BtnProps {
   border?: string;
   svg?: ReactElement<SVGElement>;
   innerSpacing?: string;
+  opacity?: number;
   onClick?: () => void;
 }
 
-const MainBtn: FC<BtnProps> = ({ text, color, bgColor, height, border, innerSpacing, svg, onClick }) => {
+const MainBtn: FC<BtnProps> = ({ opacity, text, color, bgColor, height, border, innerSpacing, svg, onClick }) => {
   const buttonStyles = {
     height: height,
     padding: innerSpacing,
@@ -22,13 +23,13 @@ const MainBtn: FC<BtnProps> = ({ text, color, bgColor, height, border, innerSpac
     border: border,
    
     '&:hover': {
-      backgroundColor: bgColor === "transparent" ? "transparent" : bgColor === "#00381f" ? "#0b4529" : bgColor,
+      backgroundColor: bgColor === "transparent" ? "transparent" : bgColor === "#00381f" ? "#0b4529" : bgColor === "#484848" ? "#525151": bgColor, 
       border: border === "1px solid #d9d9d9" ? "1px solid rgba(0, 0, 0, 0.88)": "none",
     },
   };
 
   return (
-    <Button sx={buttonStyles} onClick={onClick} disableRipple>
+    <Button sx={buttonStyles} onClick={onClick} disableRipple style={opacity ? { opacity: (opacity), cursor: "auto" } : undefined}>
       {svg ? (
         svg
       ) : (

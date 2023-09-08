@@ -31,7 +31,7 @@ const SearchBar: FC = () => {
 
   return (
     <div className="d-flex ai-center" style={{height: "100%"}}>
-      <StyledTextField inputSpace="0" fullWidth variant="outlined" placeholder="Search" value={searchValue} style={{height: "100%", flex: "1"}}
+      <StyledTextField padding="0" fullWidth variant="outlined" placeholder="Search" value={searchValue} style={{height: "100%", flex: "1"}}
         onChange={handleSearchChange} onKeyDown={handleKeyPress}/>
         <div className="searchIcon-content">
           <Button svg={<SearchIcon/>}  onClick={() => handleSearchProductFind()}/>

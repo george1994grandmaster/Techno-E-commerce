@@ -78,7 +78,25 @@ export const SearchIcon: FC = () => {
 
 export const UserIcon: FC = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17.819" viewBox="0 0 17 17.819"><g id="User" transform="translate(0.5 0.5)"><path id="Path_21" data-name="Path 21" d="M22,28.36V26.406A3.954,3.954,0,0,0,18,22.5H10a3.954,3.954,0,0,0-4,3.906V28.36" transform="translate(-6 -11.541)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path id="Path_22" data-name="Path 22" d="M19.036,8.018A3.518,3.518,0,1,1,15.518,4.5a3.518,3.518,0,0,1,3.518,3.518Z" transform="translate(-7.518 -4.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path></g></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17.819" viewBox="0 0 17 17.819"><g id="User" transform="translate(0.5 0.5)"><path id="Path_21" data-name="Path 21" d="M22,28.36V26.406A3.954,3.954,0,0,0,18,22.5H10a3.954,3.954,0,0,0-4,3.906V28.36" transform="translate(-6 -11.541)" fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1"></path><path id="Path_22" data-name="Path 22" d="M19.036,8.018A3.518,3.518,0,1,1,15.518,4.5a3.518,3.518,0,0,1,3.518,3.518Z" transform="translate(-7.518 -4.5)" fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1"></path></g></svg>
+  )
+}
+
+export const CartIcon: FC = () => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18.778" viewBox="0 0 17 18.778"><g id="Icon_feather-shopping-bag" data-name="Icon feather-shopping-bag" transform="translate(0.5 0.5)"><path id="Path_23" data-name="Path 23" d="M7.167,3,4.5,6.556V19a1.778,1.778,0,0,0,1.778,1.778H18.722A1.778,1.778,0,0,0,20.5,19V6.556L17.833,3Z" transform="translate(-4.5 -3)" fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1"></path><path id="Path_24" data-name="Path 24" d="M4.5,9h16" transform="translate(-4.5 -3)" fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1"></path><path id="Path_25" data-name="Path 25" d="M24,15a5.9,5.9,0,0,1-6,5.794A5.9,5.9,0,0,1,12,15" transform="translate(-10 -8.905)" fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1"></path></g></svg>
+  )
+}
+
+export const ArrowUp: FC = () => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="20.668" height="11.064" viewBox="0 0 20.668 11.064"><g id="Arrow_Down" data-name="Arrow Down" transform="translate(20.307 10.704) rotate(180)"><path id="Icon_Arrow_Down" data-name="Icon / Arrow Down" d="M10,0,.3,9.279,0,9.564l10,10.4" transform="translate(0 9.996) rotate(-90)" fill="none" stroke="#000" strokeWidth="1"></path></g></svg>
+  )
+}
+
+export const ArrowDown: FC = () => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="20.668" height="11.064" viewBox="0 0 20.668 11.064"><g id="Arrow_Down" data-name="Arrow Down" transform="translate(0.361 0.36)"><path id="Icon_Arrow_Down" data-name="Icon / Arrow Down" d="M10,0,.3,9.279,0,9.564l10,10.4" transform="translate(0 9.996) rotate(-90)" fill="none" stroke="#000" strokeWidth="1"></path></g></svg>
   )
 }
 

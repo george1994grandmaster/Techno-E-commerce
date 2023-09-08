@@ -2,13 +2,13 @@ import { TextField, Typography, InputLabel, FormControl } from '@mui/material';
 import { styled } from '@mui/system';
 
 const StyledTextField = styled(TextField)<{
-  inputSpace: string,
+  padding?: string,
   fontSize?: string;
   fontWeight?: string;
   color?: string;
-  }>(({ inputSpace, fontSize, fontWeight, color }) => ({
+  }>(({ padding, fontSize, fontWeight, color }) => ({
 
-  inputSpace,
+  padding,
   fontSize,
   fontWeight,
   color,
@@ -18,7 +18,7 @@ const StyledTextField = styled(TextField)<{
       backgroundColor: "#fff", 
       color: "rgba(0, 0, 0, 0.88)",
       
-      padding: inputSpace ? `${inputSpace}` : '15px',
+      padding: padding ? `${padding}` : '15px',
     },
     "& fieldset": {
       border: "none !important",
@@ -28,6 +28,7 @@ const StyledTextField = styled(TextField)<{
 
 const StyledInputLabel = styled(InputLabel)({
   marginBottom: "8px",
+  color: "rgba(0, 0, 0, 0.88)",
 });
 
 const CustomFormControl = styled(FormControl)({

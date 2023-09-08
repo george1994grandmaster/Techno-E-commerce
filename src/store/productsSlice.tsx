@@ -12,6 +12,7 @@ const initialState: ProductsState = {
   cartItems: [],
   loading: 'idle',
   error: null,
+  translated: false,
 };
 
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
@@ -41,11 +42,13 @@ const productsSlice = createSlice({
       );
     },
     addToCart: (state, action: PayloadAction<Product>) => {
+      state.translated = false;
       const newItem = { ...action.payload }; 
       const existingItemIndex = state.cartItems.findIndex(item => item.id === newItem.id);
       if (existingItemIndex !== -1 ) {
         if(state.cartItems[existingItemIndex].quantity < 10){
           state.cartItems[existingItemIndex].quantity += 1;
+          state.translated = true;
           state.cartItems[existingItemIndex].totalPrice += state.cartItems[existingItemIndex].price;
         }
       } else {
@@ -55,10 +58,12 @@ const productsSlice = createSlice({
         }
     },
     decreaseFromCart: (state, action: PayloadAction<number>) => {
+      state.translated = false;
       const newItemId = action.payload; 
       const existingItemIndex = state.cartItems.findIndex(item => item.id === newItemId);
       if (existingItemIndex !== -1 && state.cartItems[existingItemIndex].quantity > 1) {
         state.cartItems[existingItemIndex].quantity -= 1;
+        state.translated = true;
         state.cartItems[existingItemIndex].totalPrice -= state.cartItems[existingItemIndex].price;
       }
     },
@@ -76,8 +81,6 @@ const productsSlice = createSlice({
       .addCase(fetchProducts.fulfilled, (state, action: PayloadAction<Product[]>) => {
         state.loading = 'fulfilled';
         state.allProducts = action.payload;
-        //state.products = action.payload;
-        //state.products = []
       })
       .addCase(fetchProducts.rejected, (state) => {
         state.loading = 'rejected';
@@ -92,3 +95,4 @@ export const selectSearchedProduts = (state: RootStore) => state.products.search
 export const selectProducts = (state: RootStore) => state.products.products;
 export const selectCartProducts = (state: RootStore) => state.products.cartItems;
 export const selectProductQuantities = (state: RootStore) => state.products.productQuantities;
+export const selectTranslatedcount = (state: RootStore) => state.products.translated;

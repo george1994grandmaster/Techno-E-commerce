@@ -1,10 +1,15 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useState, useRef } from 'react';
 import { useSelector } from 'react-redux';
-import { selectCartProducts } from '../store/productsSlice'; // Replace with your actual import
+import { selectCartProducts, selectTranslatedcount } from '../store/productsSlice';
+import { CartIcon } from "./svgFormat";
+import {  StyledTypography } from './material_Ui';
+
 
 const Cart: FC = () => {
   const cartItems = useSelector(selectCartProducts);
+  const translatedCount = useSelector(selectTranslatedcount);
   const [totalProductCount, setTotalProductCount] = useState<number>(0);
+  const typographyRef = useRef<HTMLDivElement | null>(null); 
   
   
   useEffect(() => {
@@ -12,12 +17,23 @@ const Cart: FC = () => {
       return accumulator + currentItem.quantity;
     }, 0);
     setTotalProductCount(productQuantity);
-  }, [cartItems]); 
+  }, [cartItems]);
+
+  useEffect(() => {
+    if (typographyRef.current) {
+      typographyRef.current.style.animation = 'animate 0.2s cubic-bezier(.645, .045, .355, 1)';
+      void typographyRef.current.offsetWidth; 
+      typographyRef.current.style.animation = 'slideIn 0.2s cubic-bezier(.645, .045, .355, 1)'; // Apply animation
+    }
+  }, [totalProductCount]);
+
 
   return (
-    <>
-      <p>{totalProductCount}</p>
-    </>
+    <div className="cart-content">
+      <StyledTypography color="#fff" variant="body1" fontSize="11px" fontWeight="600" ref={typographyRef}>
+        {totalProductCount}
+      </StyledTypography>
+    </div>
   )
 }
 

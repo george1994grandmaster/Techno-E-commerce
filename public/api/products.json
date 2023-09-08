@@ -4,74 +4,169 @@
       "id": 1,
       "name": "Rolex Submariner",
       "price": 20,
-      "src": "/img/rolex-submariner.png" 
+      "src": "/img/rolex-submariner.png",
+      "variations": [
+        { "src": "/img/rolex-submariner2.png" },
+        { "src": "/img/rolex-submariner3.png" },
+        { "src": "/img/rolex-submariner4.png" },
+        { "src": "/img/rolex-submariner5.png" },
+        { "src": "/img/rolex-submariner6.png" },
+        { "src": "/img/rolex-submariner7.png" }
+      ]
     },
     {
       "id": 2,
       "name": "Omega Speedmaster",
       "price": 10,
-      "src": "/img/omega-speedmaster.png"
-     
+      "src": "/img/omega-speedmaster.png",
+      "variations": [
+        { "src": "/img/omega-speedmaster2.png" },
+        { "src": "/img/omega-speedmaster3.png" },
+        { "src": "/img/omega-speedmaster4.png" },
+        { "src": "/img/omega-speedmaster5.png" },
+        { "src": "/img/omega-speedmaster6.png" },
+        { "src": "/img/omega-speedmaster7.png" }
+      ]
     },
     {
       "id": 3,
       "name": "Vacheron Constantin",
       "price": 30,
-      "src": "/img/vacheron-Constantin.png" 
+      "src": "/img/vacheron-Constantin.png",
+      "variations": [
+        { "src": "/img/vacheron-constantin2.png" },
+        { "src": "/img/vacheron-constantin3.png" },
+        { "src": "/img/vacheron-constantin4.png" },
+        { "src": "/img/vacheron-constantin5.png" },
+        { "src": "/img/vacheron-constantin6.png" },
+        { "src": "/img/vacheron-constantin7.png" }
+      ]
     },
     {
       "id": 4,
       "name": "Tag Heuer Carrera",
       "price": 40,
-      "src": "/img/tag-heuer-carrera.png" 
+      "src": "/img/tag-heuer-carrera.png",
+      "variations": [
+        { "src": "/img/tag-heuer-carrera2.png" },
+        { "src": "/img/tag-heuer-carrera3.png" },
+        { "src": "/img/tag-heuer-carrera4.png" },
+        { "src": "/img/tag-heuer-carrera5.png" },
+        { "src": "/img/tag-heuer-carrera6.png" },
+        { "src": "/img/tag-heuer-carrera7.png" }
+      ]
     },
     {
       "id": 5,
       "name": "Patek Philippe",
       "price": 50,
-      "src": "/img/patek-philippe.png" 
+      "src": "/img/patek-philippe.png",
+      "variations": [
+        { "src": "/img/patek-philippe2.png" },
+        { "src": "/img/patek-philippe3.png" },
+        { "src": "/img/patek-philippe4.png" },
+        { "src": "/img/patek-philippe5.png" },
+        { "src": "/img/patek-philippe6.png" },
+        { "src": "/img/patek-philippe7.png" }
+      ]
     },
     {
       "id": 6,
       "name": "Audemars Piguet",
       "price": 50,
-      "src": "/img/audemars-piguet-royal-oak.png"  
+      "src": "/img/audemars-piguet-royal-oak.png",
+      "variations": [
+        { "src": "/img/audemars-piguet-royal-oak2.png" },
+        { "src": "/img/audemars-piguet-royal-oak3.png" },
+        { "src": "/img/audemars-piguet-royal-oak4.png" },
+        { "src": "/img/audemars-piguet-royal-oak5.png" },
+        { "src": "/img/aaudemars-piguet-royal-oak6.png" },
+        { "src": "/img/audemars-piguet-royal-oak7.png" }
+      ]
     },
     {
       "id": 7,
       "name": "Breitling-Navitimer B01",
       "price": 50,
-      "src": "/img/breitling-navitimer.png"  
+      "src": "/img/breitling-navitimer.png",
+      "variations": [
+        { "src": "/img/breitling-navitimer2.png" },
+        { "src": "/img/breitling-navitimer3.png" },
+        { "src": "/img/breitling-navitimer4.png" },
+        { "src": "/img/breitling-navitimer5.png" },
+        { "src": "/img/breitling-navitimer6.png" },
+        { "src": "/img/breitling-navitimer7.png" }
+      ]
     },
     {
       "id": 8,
-      "name": "IWC Portugies",
+      "name": "IWC-Portugies",
       "price": 50,
-      "src": "/img/IWC-portugies.png"  
+      "src": "/img/IWC-portugieser.png",
+      "variations": [
+        { "src": "/img/IWC-portugieser2.png" },
+        { "src": "/img/IWC-portugieser3.png" },
+        { "src": "/img/IWC-portugieser4.png" },
+        { "src": "/img/IWC-portugieser5.png" },
+        { "src": "/img/IWC-portugieser6.png" },
+        { "src": "/img/IWC-portugieser7.png" }
+      ]
     },
     {
       "id": 9,
-      "name": "Seiko Prospex.png",
+      "name": "Seiko Prospex",
       "price": 50,
-      "src": "/img/seiko-prospex.png"  
+      "src": "/img/seiko-prospex.png",
+      "variations": [
+        { "src": "/img/seiko-prospex2.png" },
+        { "src": "/img/seiko-prospex3.png" },
+        { "src": "/img/seiko-prospex4.png" },
+        { "src": "/img/seiko-prospex5.png" },
+        { "src": "/img/seiko-prospex6.png" },
+        { "src": "/img/seiko-prospex7.png" }
+      ]
     },
     {
       "id": 10,
       "name": "Tudor Black Bay Ceramic",
       "price": 50,
-      "src": "/img/tudor-black-bay-ceramic.png"  
+      "src": "/img/tudor-black-bay-ceramic.png",
+      "variations": [
+        { "src": "/img/tudor-black-bay-ceramic2.png" },
+        { "src": "/img/tudor-black-bay-ceramic3.png" },
+        { "src": "/img/tudor-black-bay-ceramic4.png" },
+        { "src": "/img/tudor-black-bay-ceramic5.png" },
+        { "src": "/img/tudor-black-bay-ceramic6.png" },
+        { "src": "/img/tudor-black-bay-ceramic7.png" }
+      ]
     },
     {
       "id": 11,
       "name": "Omega De Ville",
       "price": 50,
-      "src": "/img/omega-de-ville.png"  
+      "src": "/img/omega-de-ville.png",
+      "variations": [
+        { "src": "/img/omega-de-ville2.png" },
+        { "src": "/img/omega-de-ville3.png" },
+        { "src": "/img/omega-de-ville4.png" },
+        { "src": "/img/omega-de-ville5.png" },
+        { "src": "/img/omega-de-ville6.png" },
+        { "src": "/img/omega-de-ville7.png" }
+      ]
     },
     {
       "id": 12,
       "name": "IWC Portofino",
       "price": 50,
-      "src": "/img/iwc-portofino.png"  
+      "src": "/img/iwc-portofino.png",
+      "variations": [
+        { "src": "/img/iwc-portofino2.png" },
+        { "src": "/img/iwc-portofino3.png" },
+        { "src": "/img/iwc-portofino4.png" },
+        { "src": "/img/iwc-portofino5.png" },
+        { "src": "/img/iwc-portofino6.png" },
+        { "src": "/img/iwc-portofino7.png" }
+      ]
     }
   ]
 }
