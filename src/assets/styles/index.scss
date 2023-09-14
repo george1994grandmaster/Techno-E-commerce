@@ -2,6 +2,7 @@
 @import './form';
 @import './button';
 @import './productsList';
+@import './swiper';
 
 body {
   margin: 0;
@@ -144,6 +145,11 @@ code {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.selected-product-wrapper {
+  width: 83%;
+  margin: 0 auto;
 }
 
 

@@ -1,10 +1,10 @@
-/*import { FC, useRef } from 'react';
+import { FC, useRef } from 'react';
 import SwiperCore from 'swiper';
-//import SelectedProductSlider from "./swiperSliders/selectedProductSlider";
 import { SliderProps } from "../../types"
+import SelectedProductSlider from './selectedProductSlider';
 
 
-const Slider: FC<SliderProps> = ({ sliderName, sliderParams }) => {
+const SliderOptional: FC<SliderProps> = ({ sliderName, sliderParams }) => {
   const swiperRef = useRef<SwiperCore | null>(null);
 
   const handlePrevClick = () => {
@@ -20,9 +20,11 @@ const Slider: FC<SliderProps> = ({ sliderName, sliderParams }) => {
   };
 
   switch (sliderName) {
-    case 'yyy':
+    case 'selectedProductSlider':
       return (
-        <></>
+       
+          <SelectedProductSlider sliderParams={sliderParams}/>
+        
       );
     case 'blogSlider':
       return (
@@ -43,6 +45,5 @@ const Slider: FC<SliderProps> = ({ sliderName, sliderParams }) => {
   }
 };
 
-export default Slider;*/
+export default SliderOptional;
 
-export {}

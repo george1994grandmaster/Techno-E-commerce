@@ -14,7 +14,6 @@ const topContentSlice = createSlice({
   reducers: {
     updateValue: (state, action: PayloadAction<string> ) => {
      state.contentValue = action.payload;
-     console.log(action.payload);
     },
   },
 });

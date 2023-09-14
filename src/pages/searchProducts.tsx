@@ -15,8 +15,7 @@ const SearchProducts: FC = () => {
   },[dispatch, productQuery]);
 
   
-
-  return (
+return (
     <div className="container">
       <div className="d-flex ai-center">
         {products && (

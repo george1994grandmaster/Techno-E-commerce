@@ -4,7 +4,7 @@ import storage from 'redux-persist/lib/storage';
 import productsReducer from './productsSlice';
 import formReducer from './formSlice';
 import topContentReducer from './topContentSlice';
-
+import sliderReducer from './sliderSlice';
 
 const persistConfig = {
   key: 'root',
@@ -15,7 +15,8 @@ const persistConfig = {
 const rootReducer = combineReducers({
   products: productsReducer,
   form: formReducer,
-  topContent: topContentReducer
+  topContent: topContentReducer,
+  slider: sliderReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -34,13 +35,3 @@ export type RootStore = ReturnType<typeof store.getState>;
 export const persistor = persistStore(store);
 
 
-/*import { configureStore } from "@reduxjs/toolkit";
-import productsReducer from './productsSlice'; 
-
-export const Store = configureStore({
-  reducer: {
-    products: productsReducer, 
-  },
-});
-
-export type RootStore = ReturnType<typeof Store.getState>;*/

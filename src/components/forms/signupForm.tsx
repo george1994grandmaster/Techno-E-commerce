@@ -50,13 +50,15 @@ const RegisterForm: FC = () => {
             using email, text, telephone or post. We may also use your information to deliver personalised
             messages or advertising on social media or other digital platforms. You can ask us to stop marketing at any time. For further information about how we use your personal information, please see our Privacy Policy. If you wish to opt-out of receiving marketing information, please click here.
           </StyledTypography>
-          <StyledInputLabel className="checkbox-content">
+          <StyledInputLabel  className="checkbox-content">
             <Checkbox
               checked={checked}
               onChange={handleCheckboxChange}
               disableRipple
             />
-            <span className="text checkbox-text dark">I do not wish to receive marketing information about your products and services.</span>
+            <StyledTypography className="checkbox-text" variant="body1" fontSize="15px" fontWeight="500" color= "rgba(0, 0, 0, 0.88)">
+              I do not wish to receive marketing information about your products and services.
+            </StyledTypography>
           </StyledInputLabel>
           <div className="btn-content">
             <Button text="CREATE ACCOUNT" bgColor="#00381f" color="#fff" innerSpacing="10px 15px"/>

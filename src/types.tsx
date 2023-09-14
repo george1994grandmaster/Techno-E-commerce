@@ -1,7 +1,7 @@
 
 export interface Condition {
-  loading: 'idle' | 'pending' | 'fulfilled' | 'rejected';
-  error: string | null;
+  loading?: 'idle' | 'pending' | 'fulfilled' | 'rejected';
+  error?: string | null;
 } 
 
 export interface ProductsState extends Condition {
@@ -20,7 +20,7 @@ export interface Product {
   quantity: number;
   totalPrice: number;
   src: string;
-  //variations?: Variation[];
+  variations: Variation[];
 }
 
 export interface Variation {
@@ -35,8 +35,16 @@ export interface ContentValue extends Condition {
   contentValue: string;
 }
 
-/*export interface SliderProps {
+export interface SliderProps {
   sliderParams: Variation[] | [];
   sliderName?: string;
-}*/
+}
+
+export interface CurrentSlideIndex {
+ slideIndex: number | null;
+}
+
+
+
+
 
