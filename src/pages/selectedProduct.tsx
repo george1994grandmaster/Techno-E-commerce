@@ -53,7 +53,7 @@ const SelectProduct: FC = () => {
 
   return (
     <div className="container">
-      {products && (
+      {products && products[0] &&(
         <div className="d-flex ai-center jc-center">
           <div className="xs-12 md-10">
             <div className="d-flex mb-10">
