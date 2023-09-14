@@ -62,7 +62,7 @@ const SelectProduct: FC = () => {
                 <StyledTypography color="#00381f" variant="body1" fontSize="16px" fontWeight="600">
                   Back to home
                 </StyledTypography>
-              </Link>fff
+              </Link>
             </div>
             <div className="d-flex jc-between">
               <div className="xs-12 sm-12 md-7">
