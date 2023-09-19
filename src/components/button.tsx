@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 interface BtnProps {
+  width?: string;
   text?: string;
   height?: string;
   color?: string;
@@ -11,16 +12,19 @@ interface BtnProps {
   svg?: ReactElement<SVGElement>;
   innerSpacing?: string;
   opacity?: number;
+  fontSize?: string;
   onClick?: () => void;
 }
 
-const MainBtn: FC<BtnProps> = ({ opacity, text, color, bgColor, height, border, innerSpacing, svg, onClick }) => {
+const MainBtn: FC<BtnProps> = ({ width, opacity, fontSize, text, color, bgColor, height, border, innerSpacing, svg, onClick }) => {
   const buttonStyles = {
+    width: width,
     height: height,
     padding: innerSpacing,
     color: color,
     backgroundColor: bgColor,
     border: border,
+    
    
     '&:hover': {
       backgroundColor: bgColor === "transparent" ? "transparent" : bgColor === "#00381f" ? "#0b4529" : bgColor === "#484848" ? "#525151": bgColor, 
@@ -36,7 +40,7 @@ const MainBtn: FC<BtnProps> = ({ opacity, text, color, bgColor, height, border, 
         <Typography
           variant="button"
           component="span"
-          sx={{ fontFamily: 'Montserrat, sans-serif', textTransform: 'none' }}
+          sx={{ fontFamily: 'Montserrat, sans-serif', textTransform: 'none', fontSize: fontSize }}
         >
           {text}
         </Typography>

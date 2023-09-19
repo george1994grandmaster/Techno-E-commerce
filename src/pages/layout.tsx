@@ -15,8 +15,10 @@ const Layout: FC = () => {
         <div className="top-wrapper">
           <TopWrapper/>
         </div>
-        <div className="py-8" style={{backgroundColor: "rgb(242, 242, 242)"}}>
-          <Outlet />
+        <div className="py-10" style={{backgroundColor: "rgb(242, 242, 242)"}}>
+          <div className="container">
+            <Outlet />
+          </div>
         </div>
         <div className="bottom-wrapper">
           <BottomWrapper />

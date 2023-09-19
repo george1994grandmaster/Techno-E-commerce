@@ -1,23 +1,27 @@
-import { FC, useRef } from 'react';
+import { FC } from 'react';
 import LoginForm from "./loginForm";
 import RegisterForm from "./signupForm";
-import { useSelector, useDispatch } from 'react-redux';
-import { selectForm } from "../../store/formSlice"; 
-import { selectFormType } from '../../store/formSlice';
+import ContactForm from "./contactForm";
 import { Form } from "../../types";
 
 
 const FormOptional: FC<Form> = ({ formType }) => {
   
   switch ( formType ) {
+    
     case 'log in':
       return (
         <LoginForm />
       );
+    case "contactForm":
+      return (
+        <ContactForm/>
+      );
     case 'register':
       return (
-        < RegisterForm />
+        <RegisterForm />
       );
+      
    
     default:
       return (

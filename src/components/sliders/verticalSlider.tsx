@@ -42,7 +42,7 @@ const VerticalSlider: FC<SliderProps> = ({sliderParams}) => {
           prevEl: '.swiper-button-prev',
           nextEl: '.swiper-button-next',
         }}
-        slidesPerView={3}
+        slidesPerView={4}
         direction={'vertical'}
         spaceBetween={20}
         //centeredSlides={true} // Center the active slide
@@ -52,7 +52,7 @@ const VerticalSlider: FC<SliderProps> = ({sliderParams}) => {
         }}
       >
         {sliderParams.map((item, index) => (
-          <SwiperSlide onClick={() => handleSlideClick(index)} key={index}>
+          <SwiperSlide onClick={() => handleSlideClick(index)} key={index} style={{cursor: "pointer"}}>
             <img src={item.src} alt={`Slide ${index}`}/>
           </SwiperSlide>
         ))}

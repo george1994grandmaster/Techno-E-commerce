@@ -45,6 +45,15 @@ export interface CurrentSlideIndex {
 }
 
 
+export interface SidebarCondition {
+  sidebarCondition: boolean;
+  closeSidebar: () => void;
+}
+ 
+
+
+
+
 
 
 

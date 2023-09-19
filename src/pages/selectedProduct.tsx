@@ -77,15 +77,15 @@ const SelectProduct: FC = () => {
                     Price:&nbsp;&nbsp;${products[0].price}
                   </StyledTypography>
                   <div className="btn-content">
-                    <Button onClick={() => addProductHandler(products[0])} text="Add to bag" innerSpacing="10px 8px" bgColor="#00381f" color="#fff"/>
+                    <Button onClick={() => addProductHandler(products[0])} width="100%" text="Add to bag" innerSpacing="10px 8px" bgColor="#00381f" color="#fff"/>
                   </div>
                     {isInCart ? (
                       <div className="btn-content">
-                        <Button onClick={() => removeCartHandler(products[0].id)} text="Remove from Bag" innerSpacing="10px 8px" bgColor="#484848" color="#fff"/>
+                        <Button onClick={() => removeCartHandler(products[0].id)} width="100%" text="Remove from Bag" innerSpacing="10px 8px" bgColor="#484848" color="#fff"/>
                       </div>
                     ) : (
                     <div className="btn-content">
-                      <Button onClick={() => removeCartHandler(products[0].id)} text="Remove from Bag" innerSpacing="10px 8px" bgColor="#484848" color="#fff" opacity={0.4}/>
+                      <Button onClick={() => removeCartHandler(products[0].id)} width="100%" text="Remove from Bag" innerSpacing="10px 8px" bgColor="#484848" color="#fff" opacity={0.4}/>
                     </div>
                   )}
                 </div>

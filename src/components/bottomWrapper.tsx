@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { StyledTypography } from './material_Ui';
 import MainBtn from './button';
@@ -9,9 +9,11 @@ import { MainLogo, Visa, MasterCard, Ethereum, Instagram, Facebook, TikTok} from
 const BottomWrapper: FC = () => {
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const selectFormHandle = (formTypeValue: string) => {
     dispatch(selectForm(formTypeValue));
+    navigate('/auth');
   };
 
   return (
@@ -25,12 +27,10 @@ const BottomWrapper: FC = () => {
                   Subscribe to the Newsletter
                 </StyledTypography>
                 <StyledTypography variant="body1" fontSize="14px" fontWeight="500" className="mb-4">
-                  Sign up & and receive news about all new Luxury items that has just dropped.
+                  Sign in & and receive news about all new Luxury items that has just dropped.
                 </StyledTypography>
                 <div className="btn-content mb-3">
-                  <Link to="/auth/signup" style={{display: "block"}}>
-                    <MainBtn text="Sign Up" border="1px solid #d9d9d9" bgColor="transparent" color="rgba(0, 0, 0, 0.88);" innerSpacing="10px 15px" onClick={() => selectFormHandle("register")}/> 
-                  </Link>
+                  <MainBtn text="Sign in" border="1px solid #d9d9d9" bgColor="transparent" color="rgba(0, 0, 0, 0.88);" innerSpacing="10px 15px" onClick={() => selectFormHandle("log in")}/> 
                 </div>
               </div>
               <div style={{paddingBottom: "40px"}}>

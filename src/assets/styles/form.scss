@@ -6,14 +6,7 @@
   white-space: break-spaces !important;
 }
 
-.login-register-wrapper {
-  //padding: 40px 0;
-  //background-color: $grey;
-}
 
-//.MuiFormControl-root {
-  //padding: 0 !important;
-//}
 
 .form-content {
   max-width: 800px !important;
@@ -72,5 +65,22 @@
   font-size: calc(15px + 0.1vw);
   font-weight: 500;
   cursor: pointer;
+}
+
+.contact-form {
+
+  label {
+
+    &::before {
+      display: inline-block;
+      margin-inline-end: 4px;
+      color: #ff4d4f;
+      font-size: 14px;
+      font-family: SimSun,sans-serif;
+      line-height: 1;
+      content: "*";
+    }
+    
+  }
 }
 

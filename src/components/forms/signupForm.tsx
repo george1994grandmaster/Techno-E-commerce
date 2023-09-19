@@ -21,13 +21,13 @@ const RegisterForm: FC = () => {
       </div>
       <form>
         <div style={{marginBottom: "24px"}}>
-          <StyledInputLabel htmlFor="email-input">Full name</StyledInputLabel>
+          <StyledInputLabel htmlFor="full-name-input">Full name</StyledInputLabel>
           <CustomFormControl>
             <StyledTextField fullWidth variant="outlined" placeholder="full name" id="full-name-input" />
           </CustomFormControl>
         </div>
         <div style={{marginBottom: "24px"}}>
-          <StyledInputLabel htmlFor="password-input">Email address</StyledInputLabel>
+          <StyledInputLabel htmlFor="email-input">Email address</StyledInputLabel>
           <CustomFormControl>
             <StyledTextField fullWidth type="email" variant="outlined" placeholder="Email address" id="email-input" />
           </CustomFormControl>

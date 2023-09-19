@@ -2,19 +2,14 @@
   margin-bottom: 50px;
   padding: 15px 20px;
 
-  a {
+  img {
+    height: 220px;
+    object-fit: scale-down;
     transition: all 0.3s ease;
 
     &:hover {
       transform: scale(1.1);
     }
-  }
-
- 
-  
-  img {
-    height: 220px;
-    object-fit: scale-down;
   }
 }
 

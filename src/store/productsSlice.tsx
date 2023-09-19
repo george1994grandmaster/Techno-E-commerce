@@ -69,8 +69,8 @@ const productsSlice = createSlice({
     },
     removeFromCart: (state, action: PayloadAction<number>) => {
       const productId = action.payload;
-      const productIndex = state.cartItems.findIndex(item => item.id === productId);
-      state.cartItems = state.cartItems.filter(item => item.id !== action.payload);
+      //const productIndex = state.cartItems.findIndex(item => item.id === productId);
+      state.cartItems = state.cartItems.filter(item => item.id !== productId);
     }
   },
   extraReducers: (builder) => {
@@ -81,6 +81,7 @@ const productsSlice = createSlice({
       .addCase(fetchProducts.fulfilled, (state, action: PayloadAction<Product[]>) => {
         state.loading = 'fulfilled';
         state.allProducts = action.payload;
+        //state.allProducts = [];
       })
       .addCase(fetchProducts.rejected, (state) => {
         state.loading = 'rejected';
