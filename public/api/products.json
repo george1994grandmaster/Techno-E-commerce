@@ -17,6 +17,19 @@
       ]
     },
     {
+      "id": 4545,
+      "name": "Louis Vuitton",
+      "price": 20,
+      "src": "/img/louis-vuitton.png",
+      "variations": [
+        { "src": "/img/louis-vuitton.png" },
+        { "src": "/img/louis-vuitton2.png" },
+        { "src": "/img/louis-vuitton3.png" },
+        { "src": "/img/louis-vuitton4.png" },
+        { "src": "/img/louis-vuitton5.png" }
+      ]
+    },
+    {
       "id": 2,
       "name": "Omega Speedmaster",
       "price": 10,
@@ -35,6 +48,20 @@
     },
     {
       "id": 3,
+      "name": "David Yurman Cable Classics",
+      "price": 10,
+      "src": "/img/david-yurman.png",
+      "variations": [
+        { "src": "/img/david-yurman.png" },
+        { "src": "/img/david-yurman2.png" },
+        { "src": "/img/david-yurman3.png" },
+        { "src": "/img/david-yurman4.png" },
+        { "src": "/img/david-yurman5.png" },
+        { "src": "/img/david-yurman6.png" }
+      ]
+    },
+    {
+      "id": 3,
       "name": "Vacheron Constantin",
       "price": 30,
       "src": "/img/vacheron-Constantin.png",
@@ -46,6 +73,21 @@
         { "src": "/img/vacheron-constantin5.png" },
         { "src": "/img/vacheron-constantin6.png" },
         { "src": "/img/vacheron-constantin7.png" }
+      ]
+    },
+    {
+      "id": 98743,
+      "name": "Givenchy Antigona Navy",
+      "price": 30,
+      "src": "/img/givenchy.png",
+      "variations": [
+        { "src": "/img/givenchy.png" },
+        { "src": "/img/givenchy2.png" },
+        { "src": "/img/givenchy3.png" },
+        { "src": "/img/givenchy4.png" },
+        { "src": "/img/givenchy5.png" },
+        { "src": "/img/givenchy6.png" },
+        { "src": "/img/givenchy7.png" }
       ]
     },
     {
@@ -64,6 +106,38 @@
       ]
     },
     {
+      "id": 67854,
+      "name": "Sony WH-1000XM4(Wireless Noise-Canceling Headphones)",
+      "price": 30,
+      "src": "/img/sony-Wireless-Noise-Canceling-Headphones.png",
+      "variations": [
+        { "src": "/img/sony-Wireless-Noise-Canceling-Headphones.png" },
+        { "src": "/img/sony-Wireless-Noise-Canceling-Headphones2.png" },
+        { "src": "/img/sony-Wireless-Noise-Canceling-Headphones3.png" },
+        { "src": "/img/sony-Wireless-Noise-Canceling-Headphones4.png" },
+        { "src": "/img/sony-Wireless-Noise-Canceling-Headphones5.png" },
+        { "src": "/img/sony-Wireless-Noise-Canceling-Headphones6.png" },
+        { "src": "/img/sony-Wireless-Noise-Canceling-Headphones7.png" },
+        { "src": "/img/sony-Wireless-Noise-Canceling-Headphones8.png" }
+       ]
+    },
+    {
+      "id": 769,
+      "name": "Chanel - Black Quilted Caviar Leather Jumbo",
+      "price": 40,
+      "src": "/img/chanel.png",
+      "variations": [
+        { "src": "/img/chanel.png" },
+        { "src": "/img/chanel2.png" },
+        { "src": "/img/chanel3.png" },
+        { "src": "/img/chanel4.png" },
+        { "src": "/img/chanel5.png" },
+        { "src": "/img/chanel6.png" },
+        { "src": "/img/chanel7.png" },
+        { "src": "/img/chanel8.png" }
+      ]
+    },
+    {
       "id": 5,
       "name": "Patek Philippe",
       "price": 50,
@@ -76,6 +150,20 @@
         { "src": "/img/patek-philippe5.png" },
         { "src": "/img/patek-philippe6.png" },
         { "src": "/img/patek-philippe7.png" }
+      ]
+    },
+    {
+      "id": 987,
+      "name": "GG Marmont small shoulder",
+      "price": 50,
+      "src": "/img/gucci.png",
+      "variations": [
+        { "src": "/img/gucci.png" },
+        { "src": "/img/gucci2.png" },
+        { "src": "/img/gucci3.png" },
+        { "src": "/img/gucci4.png" },
+        { "src": "/img/gucci5.png" },
+        { "src": "/img/gucci6.png" }
       ]
     },
     {
@@ -97,6 +185,19 @@
     },
     {
       "id": 7,
+      "name": "Kendra Scott Elisa Pendant Necklace",
+      "price": 10,
+      "src": "/img/kendra-scott.png",
+      "variations": [
+        { "src": "/img/kendra-scott.png" },
+        { "src": "/img/kendra-scott2.png" },
+        { "src": "/img/kendra-scott3.png" },
+        { "src": "/img/kendra-scott4.png" },
+        { "src": "/img/kendra-scott5.png" }
+      ]
+    },
+    {
+      "id": 7,
       "name": "Breitling-Navitimer B01",
       "price": 50,
       "src": "/img/breitling-navitimer.png",
@@ -108,6 +209,36 @@
         { "src": "/img/breitling-navitimer5.png" },
         { "src": "/img/breitling-navitimer6.png" },
         { "src": "/img/breitling-navitimer7.png" }
+      ]
+    },
+    {
+      "id": 78765544,
+      "name": "Bose QuietComfort 35 II (Wireless Noise-Canceling Headphones)",
+      "price": 30,
+      "src": "/img/bose-Wireless-Noise-Cancelin-Headphones.png",
+      "variations": [
+        { "src": "/img/bose-Wireless-Noise-Cancelin-Headphones.png" },
+        { "src": "/img/bose-Wireless-Noise-Cancelin-Headphones2.png" },
+        { "src": "/img/bose-Wireless-Noise-Cancelin-Headphones3.png" },
+        { "src": "/img/bose-Wireless-Noise-Cancelin-Headphones4.png" },
+        { "src": "/img/bose-Wireless-Noise-Cancelin-Headphones5.png" },
+        { "src": "/img/bose-Wireless-Noise-Cancelin-Headphones6.png" },
+        { "src": "/img/bose-Wireless-Noise-Cancelin-Headphones7.png" }
+      ]
+    },
+    {
+      "id": 1234,
+      "name": "Prada Galleria Saffiano Leather",
+      "price": 50,
+      "src": "/img/prada-galleria.png",
+      "variations": [
+        { "src": "/img/prada-galleria.png" },
+        { "src": "/img/prada-galleria2.png" },
+        { "src": "/img/prada-galleria3.png" },
+        { "src": "/img/prada-galleria4.png" },
+        { "src": "/img/prada-galleria5.png" },
+        { "src": "/img/prada-galleria6.png" },
+        { "src": "/img/prada-galleria7.png" }
       ]
     },
     {
@@ -141,6 +272,21 @@
       ]
     },
     {
+      "id": 19,
+      "name": "Cartier Love Necklace",
+      "price": 10,
+      "src": "/img/cartier-love.png",
+      "variations": [
+        { "src": "/img/cartier-love.png" },
+        { "src": "/img/cartier-love2.png" },
+        { "src": "/img/cartier-love3.png" },
+        { "src": "/img/cartier-love4.png" },
+        { "src": "/img/cartier-love5.png" },
+        { "src": "/img/cartier-love6.png" },
+        { "src": "/img/cartier-love7.png" }
+      ]
+    },
+    {
       "id": 10,
       "name": "Tudor Black Bay Ceramic",
       "price": 50,
@@ -169,6 +315,19 @@
         { "src": "/img/omega-de-ville5.png" },
         { "src": "/img/omega-de-ville6.png" },
         { "src": "/img/omega-de-ville7.png" }
+      ]
+    },
+    {
+      "id": 1199,
+      "name": "Swarovski Angelic Square Necklace",
+      "price": 10,
+      "src": "/img/swarovski.png",
+      "variations": [
+        { "src": "/img/swarovski.png" },
+        { "src": "/img/swarovski2.png" },
+        { "src": "/img/swarovski3.png" },
+        { "src": "/img/swarovski4.png" },
+        { "src": "/img/swarovski5.png" }
       ]
     },
     {

@@ -37,6 +37,7 @@ const NavigatedSlider: FC<SliderProps> = ({sliderParams}) => {
         className="swiper navigation-swiper"
         slidesPerView={1}
         spaceBetween={40}
+        grabCursor={true}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}

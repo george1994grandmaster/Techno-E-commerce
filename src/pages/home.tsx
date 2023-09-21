@@ -25,7 +25,7 @@ const ProductList: React.FC = () => {
                     <img src={product.src} alt="product" style={{ display: 'block' }} />
                   </div>
                   <div className="card-body">
-                    <StyledTypography variant="body1" color="rgba(0, 0, 0, 0.88)" fontSize="16px"  fontWeight="600" className="mb-1">
+                    <StyledTypography  variant="body1" color="#000" fontSize="16px"  fontWeight="600" className="mb-2">
                       {product.name}
                     </StyledTypography>
                     <StyledTypography variant="body1" color="rgba(0, 0, 0, 0.88)" fontSize="16px" fontWeight="600">

@@ -13,7 +13,7 @@ const RegisterForm: FC = () => {
   };
 
   return (
-    <Container className="contact-form">
+    <Container>
       <div className="d-flex jc-center">
         <div className="xs-12 sm-9 lg-7">
           <div className="form-typography-content">
@@ -30,34 +30,34 @@ const RegisterForm: FC = () => {
               <StyledTypography variant="h3" fontSize="20px" fontWeight="600">
                 CONTACT DETAILS
               </StyledTypography>
-              <StyledTypography variant="body1" fontSize="14px" fontWeight="500">
+              <StyledTypography className="required-col" variant="body1" fontSize="14px" fontWeight="500">
                 Required fields
               </StyledTypography>
             </div>
           </div>
           <form>
             <div style={{marginBottom: "24px"}}>
-              <StyledInputLabel htmlFor="name-input">Name</StyledInputLabel>
+              <StyledInputLabel className="required-col" htmlFor="name-input">Name</StyledInputLabel>
               <CustomFormControl>
                 <StyledTextField fullWidth variant="outlined" placeholder="Name" id="name-input" />
               </CustomFormControl>
             </div>
             <div style={{marginBottom: "24px"}}>
-              <StyledInputLabel htmlFor="surname-input">Surname</StyledInputLabel>
+              <StyledInputLabel className="required-col" htmlFor="surname-input">Surname</StyledInputLabel>
               <CustomFormControl>
                 <StyledTextField fullWidth type="text" variant="outlined" placeholder="Surname" id="surname-input" />
               </CustomFormControl>
             </div>
             <div style={{marginBottom: "24px"}}>
-              <StyledInputLabel htmlFor="email-input">Email address</StyledInputLabel>
+              <StyledInputLabel className="required-col" htmlFor="email-input">Email address</StyledInputLabel>
               <CustomFormControl>
                 <StyledTextField fullWidth type="email" variant="outlined" placeholder="Email" id="email-input"/>
               </CustomFormControl>
             </div>
             <div style={{marginBottom: "24px"}}>
-              <StyledInputLabel htmlFor="phone-input">Phone</StyledInputLabel>
+              <StyledInputLabel className="required-col" htmlFor="suphone-input">Phone</StyledInputLabel>
               <CustomFormControl>
-                <StyledTextField fullWidth type="tel" variant="outlined" placeholder="(123) 675-6983" id="suphone-input"/>
+                <StyledTextField fullWidth type="tel" variant="outlined" placeholder="+(888) 675-6983" id="suphone-input"/>
               </CustomFormControl>
             </div>
             <div className="form-col">

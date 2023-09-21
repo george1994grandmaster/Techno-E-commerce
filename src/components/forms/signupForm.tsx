@@ -21,25 +21,25 @@ const RegisterForm: FC = () => {
       </div>
       <form>
         <div style={{marginBottom: "24px"}}>
-          <StyledInputLabel htmlFor="full-name-input">Full name</StyledInputLabel>
+          <StyledInputLabel className="required-col" htmlFor="full-name-input">Full name</StyledInputLabel>
           <CustomFormControl>
             <StyledTextField fullWidth variant="outlined" placeholder="full name" id="full-name-input" />
           </CustomFormControl>
         </div>
         <div style={{marginBottom: "24px"}}>
-          <StyledInputLabel htmlFor="email-input">Email address</StyledInputLabel>
+          <StyledInputLabel className="required-col" htmlFor="email-input">Email address</StyledInputLabel>
           <CustomFormControl>
             <StyledTextField fullWidth type="email" variant="outlined" placeholder="Email address" id="email-input" />
           </CustomFormControl>
         </div>
         <div style={{marginBottom: "24px"}}>
-          <StyledInputLabel htmlFor="password-input">Password</StyledInputLabel>
+        <StyledInputLabel className="required-col" htmlFor="password-input">Password</StyledInputLabel>
           <CustomFormControl>
-            <StyledTextField fullWidth type="password" variant="outlined" placeholder="Password" />
+            <StyledTextField fullWidth type="password" id="password-input" variant="outlined" placeholder="Password" />
           </CustomFormControl>
         </div>
         <div style={{marginBottom: "24px"}}>
-          <StyledInputLabel htmlFor="confirm-password-input">Confirm Password</StyledInputLabel>
+          <StyledInputLabel className="required-col" htmlFor="confirm-password-input">Confirm Password</StyledInputLabel>
           <CustomFormControl>
             <StyledTextField fullWidth type="password" variant="outlined" placeholder="Password Confirm" id="confirm-password-input" />
           </CustomFormControl>
@@ -50,7 +50,7 @@ const RegisterForm: FC = () => {
             using email, text, telephone or post. We may also use your information to deliver personalised
             messages or advertising on social media or other digital platforms. You can ask us to stop marketing at any time. For further information about how we use your personal information, please see our Privacy Policy. If you wish to opt-out of receiving marketing information, please click here.
           </StyledTypography>
-          <StyledInputLabel  className="checkbox-content">
+          <StyledInputLabel className="checkbox-content">
             <Checkbox
               checked={checked}
               onChange={handleCheckboxChange}

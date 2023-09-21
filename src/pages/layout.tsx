@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { Outlet } from 'react-router-dom';
 import Header from '../components/navbar';
 import Footer from '../components/footer';
@@ -8,6 +8,7 @@ import TopWrapper from '../components/topWrapper';
 
 const Layout: FC = () => {
 
+  
   return (
     <>
       <Header />

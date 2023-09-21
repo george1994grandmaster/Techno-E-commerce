@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { StyledTypography } from './material_Ui';
 import MainBtn from './button';
-import { selectForm } from "../store/formSlice"; 
 import { MainLogo, Visa, MasterCard, Ethereum, Instagram, Facebook, TikTok} from "./svgFormat"; 
 
 const BottomWrapper: FC = () => {
@@ -12,7 +11,6 @@ const BottomWrapper: FC = () => {
   const navigate = useNavigate();
 
   const selectFormHandle = (formTypeValue: string) => {
-    dispatch(selectForm(formTypeValue));
     navigate('/auth');
   };
 

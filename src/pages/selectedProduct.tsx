@@ -23,21 +23,18 @@ const SelectProduct: FC = () => {
   useEffect(() => {
     if (productId) {
       dispatch(filterProductsById(parseInt(productId)));
-    }
-  }, [dispatch, productId]);
-
-  useEffect(() => {
-    if (productId) {
       const checkIsInCart = cartItems.some((item: Product) => item.id === parseInt(productId));
       setIsInCart(checkIsInCart); 
     }
-  }, [cartItems, productId]);
+  }, [dispatch, productId, cartItems]);
 
   useEffect(() => {
     dispatch(setSlideIndex(0))
   },[]);
 
-  
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
 
   const [isInCart, setIsInCart] = useState<boolean>(false);
   
@@ -70,7 +67,7 @@ const SelectProduct: FC = () => {
               </div>
               <div className="xs-12 sm-12 md-4">
                 <div className="d-flex fd-column" style={{gap: "20px"}}>
-                  <StyledTypography color="rgba(0, 0, 0, 0.88)" variant="h3" fontSize="24px" fontWeight="600">
+                  <StyledTypography style={{lineHeight: "1.3"}} color="rgba(0, 0, 0, 0.88)" variant="h3" fontSize="24px" fontWeight="600">
                     {products[0].name}
                   </StyledTypography>
                   <StyledTypography color="rgba(0, 0, 0, 0.88)" variant="h3" fontSize="24px" fontWeight="600">

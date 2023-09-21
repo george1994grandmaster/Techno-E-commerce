@@ -9,6 +9,7 @@ declare module 'swiper/react' {
     centeredSlidesBounds?: boolean;
     initialSlide?: number;
     loopedSlides?: number;
+    grabCursor?: boolean;
     navigation?: {
       prevEl: string;
       nextEl: string;
