@@ -17,10 +17,11 @@ const SelectProduct: FC = () => {
   const products = useSelector(selectProducts);
   const cartItems = useSelector(selectCartProducts);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  
   
 
   useEffect(() => {
+    window.scrollTo(0, 0); 
     if (productId) {
       dispatch(filterProductsById(parseInt(productId)));
       const checkIsInCart = cartItems.some((item: Product) => item.id === parseInt(productId));
@@ -32,11 +33,7 @@ const SelectProduct: FC = () => {
     dispatch(setSlideIndex(0))
   },[]);
 
-  useEffect(() => {
-    window.scrollTo(0, 0); 
-  }, []);
-
-  const [isInCart, setIsInCart] = useState<boolean>(false);
+const [isInCart, setIsInCart] = useState<boolean>(false);
   
   
   const addProductHandler = (product: Product) => {
@@ -49,13 +46,13 @@ const SelectProduct: FC = () => {
   }
 
   return (
-    <div className="container">
+    <>
       {products && products[0] &&(
         <div className="d-flex ai-center jc-center">
           <div className="xs-12 md-10">
             <div className="d-flex mb-10">
-              <FontAwesomeIcon className="success" size="lg" icon={faArrowRotateLeft} style={{ color: "#00381f", marginRight: "10px" }}/>
-              <Link to={"/"}>
+              <Link to={"/"} className="d-flex ai-center hovered-underline">
+                <FontAwesomeIcon className="success" size="lg" icon={faArrowRotateLeft} style={{ color: "#00381f", marginRight: "10px" }}/>
                 <StyledTypography color="#00381f" variant="body1" fontSize="16px" fontWeight="600">
                   Back to home
                 </StyledTypography>
@@ -65,7 +62,7 @@ const SelectProduct: FC = () => {
               <div className="xs-12 sm-12 md-7">
                 <SliderOptional sliderName="selectedProductSlider" sliderParams={products[0].variations}/>
               </div>
-              <div className="xs-12 sm-12 md-4">
+              <div className="xs-12 sm-12 md-4 px-3">
                 <div className="d-flex fd-column" style={{gap: "20px"}}>
                   <StyledTypography style={{lineHeight: "1.3"}} color="rgba(0, 0, 0, 0.88)" variant="h3" fontSize="24px" fontWeight="600">
                     {products[0].name}
@@ -91,7 +88,7 @@ const SelectProduct: FC = () => {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

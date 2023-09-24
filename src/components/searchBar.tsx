@@ -12,7 +12,7 @@ const SearchBar: FC = () => {
  
   const [searchValue, setSearchValue] = useState<string>("")
 
- const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const searchProductItem = event.target.value;
     setSearchValue(searchProductItem)
   };

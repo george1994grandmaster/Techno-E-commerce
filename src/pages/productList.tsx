@@ -5,11 +5,9 @@ import { fetchProducts, selectAllProducts } from '../store/productsSlice';
 import { StyledTypography } from '../components/material_Ui';
 import { Product } from '../types';
 
-const Home: React.FC = () => {
+const ProductList: React.FC = () => {
   const dispatch = useDispatch();
   const allProducts = useSelector(selectAllProducts);
-  const fromItem = 0;
-  const limitItem = 8;
   
   useEffect(() => {
     dispatch(fetchProducts() as any);
@@ -19,7 +17,7 @@ const Home: React.FC = () => {
     <>
       <div className="productList-container">
         {allProducts &&
-           allProducts.slice(fromItem, limitItem).map((product: Product) => (
+           allProducts.map((product: Product) => (
             <div className="card" key={product.id}>
               <Link to={`/products/detail/${product.id}`} key={product.id} style={{ display: 'block' }}>
                 <div className="d-flex fd-column jc-center ai-center">
@@ -45,4 +43,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default ProductList;

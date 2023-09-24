@@ -1,25 +1,29 @@
-import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { FC, useEffect } from "react";
+import { Link, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchProducts, selectAllProducts } from '../store/productsSlice';
+import { filterProductsByCategories, selectProducts } from '../store/productsSlice';
 import { StyledTypography } from '../components/material_Ui';
 import { Product } from '../types';
 
-const Home: React.FC = () => {
+const Categories: FC = () => {
+
+  const { productCategory } = useParams<{ productCategory: string }>();
   const dispatch = useDispatch();
-  const allProducts = useSelector(selectAllProducts);
-  const fromItem = 0;
-  const limitItem = 8;
-  
+  const categoryProducts = useSelector(selectProducts);
+
   useEffect(() => {
-    dispatch(fetchProducts() as any);
-  }, [dispatch]);
+    dispatch(filterProductsByCategories(productCategory as string));
+  }, [dispatch, productCategory]);
+
+  /*const filteredProducts = allProducts.filter(
+    (product) => product.category === productCategory
+  );*/
 
   return (
     <>
-      <div className="productList-container">
-        {allProducts &&
-           allProducts.slice(fromItem, limitItem).map((product: Product) => (
+    <div className="productList-container">
+        {categoryProducts &&
+           categoryProducts.map((product: Product) => (
             <div className="card" key={product.id}>
               <Link to={`/products/detail/${product.id}`} key={product.id} style={{ display: 'block' }}>
                 <div className="d-flex fd-column jc-center ai-center">
@@ -42,7 +46,7 @@ const Home: React.FC = () => {
           ))}
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Categories;

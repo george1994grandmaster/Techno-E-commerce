@@ -15,29 +15,35 @@ const TopWrapper: FC = () => {
   }, [location.pathname]);
 
   useEffect(() => {
-    switch (currentPath) {
-      case "/products":
-        dispatch(updateValue("collection"));
+    switch (true) {
+      case currentPath && currentPath.startsWith("/products"):
+        dispatch(updateValue("Collection"));
         break;
-      case "/auth":
+      case currentPath === "/auth":
         dispatch(updateValue("Log In / Create a New Account"));
         break;
+      case currentPath === "/shopping-cart":
+        dispatch(updateValue("Shopping-Cart"));
+        break;
       default:
-      break;
+        // Handle other cases
+        break;
     }
   }, [currentPath, dispatch]);
 
-  return (
-    <>
-      {currentPath === "/products" || currentPath === "/products/detail" || currentPath === "/auth" || currentPath === "/shopping" ? (
-        <div className="py-8 bg-light">
-          <StyledTypography variant="h2" fontSize="19px" fontWeight="600" color="rgba(0, 0, 0, 0.88);">
-            {topContentValue}
-          </StyledTypography>
-        </div>
-      ) : null}
-    </>
-  );
+  const allowedPaths = [
+    /^\/products(\/.*)?$/,  
+    /^\/auth$/,            
+    /^\/shopping-cart$/,        
+  ];
+
+  return allowedPaths.some(path => path.test(currentPath as string)) ? (
+    <div className="bg-light py-7 px-10">
+      <StyledTypography variant="h2" fontSize="22px" fontWeight="600" color="rgba(0, 0, 0, 0.88)">
+        {topContentValue}
+      </StyledTypography>
+    </div>
+  ) : null;
 }
 
 export default TopWrapper;

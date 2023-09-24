@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import { RootStore } from './store';
-//import { Product } from '../types';
 import { CurrentSlideIndex } from '../types';
 
 const initialState: CurrentSlideIndex = {

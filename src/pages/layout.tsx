@@ -1,5 +1,7 @@
 import { FC, useEffect } from "react";
 import { Outlet } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setSidebarPosition } from '../store/sidebarSlice';
 import Header from '../components/navbar';
 import Footer from '../components/footer';
 import BottomWrapper from '../components/bottomWrapper';

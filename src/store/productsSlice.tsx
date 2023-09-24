@@ -41,6 +41,12 @@ const productsSlice = createSlice({
         product.id == searchQuery
       );
     },
+    filterProductsByCategories: (state, action: PayloadAction<string>) => {
+      const searchQuery = action.payload;
+      state.products = state.allProducts.filter(product =>
+        product.category === searchQuery
+      );
+    },
     addToCart: (state, action: PayloadAction<Product>) => {
       state.translated = false;
       const newItem = { ...action.payload }; 
@@ -89,7 +95,7 @@ const productsSlice = createSlice({
   },
 });
 
-export const { filterProductsByLetter, filterProductsById, addToCart, decreaseFromCart, removeFromCart} = productsSlice.actions;
+export const { filterProductsByLetter, filterProductsByCategories, filterProductsById, addToCart, decreaseFromCart, removeFromCart} = productsSlice.actions;
 export default productsSlice.reducer;
 export const selectAllProducts = (state: RootStore) => state.products.allProducts;
 export const selectSearchedProduts = (state: RootStore) => state.products.searchedProducts;

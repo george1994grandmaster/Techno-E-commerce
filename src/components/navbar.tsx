@@ -1,5 +1,7 @@
-import { FC, useState } from "react";
+import { FC, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux';
+import { setSidebarPosition } from '../store/sidebarSlice';
 import { NavbarLogo } from "./svgFormat"; 
 import SearchBar from "./searchBar";
 import Cart from "./cart";
@@ -10,6 +12,7 @@ import Sidebar from "./sidebar";
 const Header: FC = () => {
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [isSidebarClosed, setIsSidebarClosed] = useState<boolean>(false);
 
   const handleNavigate = (path: string) => {
@@ -17,16 +20,20 @@ const Header: FC = () => {
   }
 
   const openSidebar = () => {
-    setIsSidebarClosed(true);
+    //setIsSidebarClosed(true);
+    dispatch(setSidebarPosition(true));
   };
   
-  const closeSidebar = () => {
+  
+  /*const closeSidebar = () => {
     setIsSidebarClosed(false);
-  };
+  };*/
+
+
   
   return (
     <div className="navbar-wrapper">
-      <Sidebar sidebarCondition={isSidebarClosed} closeSidebar={closeSidebar}/>
+      <Sidebar /*sidebarCondition={isSidebarClosed}*//>
       <div className="d-flex">
         <div className="col-1">
           <Button text={"Shop"} color="rgba(0, 0, 0, 0.88)" innerSpacing="10px 15px" onClick={openSidebar}/>

@@ -96,17 +96,16 @@ code {
   left: 0;
   width: 260px;
   height: 90vh;
-  padding: 30px 15px; 
+  padding: 50px 15px 35px 15px; 
   background-color: $light;
   z-index: 3;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   overflow: hidden;
-  opacity: 1;
-  visibility: visible;
-
+  
   &.hide {
-    opacity: 0;
-    visibility: hidden;
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   button {
@@ -194,6 +193,28 @@ code {
 .selected-product-wrapper {
   width: 83%;
   margin: 0 auto;
+}
+
+.hovered-underline {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: $dark;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+
+    &::before {
+      width: 100%;
+    }
+  }
 }
 
 

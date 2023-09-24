@@ -35,9 +35,9 @@ const ShoppingCart: FC = () => {
   }
 
   return (
-    <div className="container">
-      <div className="d-flex py-10">
-        <div className="xs-12 sm-12 md-9">
+    <>
+      <div className="d-flex jc-between py-10">
+        <div className="xs-12 sm-12 md-8">
           <div className="d-flex fd-column" style={{gap: "100px"}}>
             {cartItems.map((item: Product) => (
               <div className="d-flex jc-between" key={item.id}>
@@ -115,7 +115,7 @@ const ShoppingCart: FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -5,22 +5,21 @@ import { selectProducts, selectSearchedProduts, filterProductsByLetter } from '.
 import { Product } from '../types';
 
 const SearchProducts: FC = () => {
-   const dispatch = useDispatch()
+  const dispatch = useDispatch()
   const products = useSelector(selectSearchedProduts);
   const { productQuery } = useParams<{ productQuery: string }>();
-  console.log(productQuery)
-
+  
   useEffect(() => {
     dispatch(filterProductsByLetter(productQuery as string));
   },[dispatch, productQuery]);
 
   
 return (
-    <div className="container">
-      <div className="d-flex ai-center">
+    <>
+      <div className="productList-container">
         {products && (
           products.map((product: Product) => (
-            <div className="card xs-12 sm-4 md-4 lg-3" key={product.id}>
+            <div className="card" key={product.id}>
               <Link to={`/products/detail/${product.id}`} key={product.id}  style={{display: "block", }}>
                 <div className="d-flex fd-column jc-center ai-center">
                   <div style={{width: "100%"}}>
@@ -36,7 +35,7 @@ return (
           ))
         )}
       </div>
-    </div>
+    </>
   );
 }
 export default SearchProducts

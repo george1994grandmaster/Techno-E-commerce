@@ -20,6 +20,7 @@ export interface Product {
   quantity: number;
   totalPrice: number;
   src: string;
+  category: string;
   variations: Variation[];
 }
 
@@ -44,10 +45,14 @@ export interface CurrentSlideIndex {
  slideIndex: number | null;
 }
 
+export interface sidebarCondition {
+  isSidebarOpen: boolean;
+ }
+
 
 export interface SidebarCondition {
-  sidebarCondition: boolean;
-  closeSidebar: () => void;
+  //sidebarCondition: boolean;
+  //closeSidebar: () => void;
 }
  
 
