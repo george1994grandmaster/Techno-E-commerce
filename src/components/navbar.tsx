@@ -20,20 +20,12 @@ const Header: FC = () => {
   }
 
   const openSidebar = () => {
-    //setIsSidebarClosed(true);
     dispatch(setSidebarPosition(true));
   };
   
-  
-  /*const closeSidebar = () => {
-    setIsSidebarClosed(false);
-  };*/
-
-
-  
   return (
     <div className="navbar-wrapper">
-      <Sidebar /*sidebarCondition={isSidebarClosed}*//>
+      <Sidebar/>
       <div className="d-flex">
         <div className="col-1">
           <Button text={"Shop"} color="rgba(0, 0, 0, 0.88)" innerSpacing="10px 15px" onClick={openSidebar}/>

@@ -5,11 +5,13 @@ import productsReducer from './productsSlice';
 import topContentReducer from './topContentSlice';
 import sliderReducer from './sliderSlice';
 import sidebarReducer from './sidebarSlice';
+import presentReducer from './presentSlice';
 
 const persistConfig = {
   key: 'root',
   version: 1,
   storage,
+  //blacklist: ['products'],
 };
 
 const rootReducer = combineReducers({
@@ -17,6 +19,7 @@ const rootReducer = combineReducers({
   topContent: topContentReducer,
   slider: sliderReducer,
   sidebar: sidebarReducer,
+  presentation: presentReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

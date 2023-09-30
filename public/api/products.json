@@ -3,10 +3,17 @@
   "products": [
     {
       "id": 1,
-      "name": "Rolex Submariner",
+      "name": "Rolex Submariner 41mm",
       "price": 20,
       "src": "/img/rolex-submariner.png",
       "category": "watches",
+      "description": "The Rolex Submariner is a legendary timepiece that has established itself as an icon among luxury dive watches. This exceptional watch seamlessly combines form and function, making it a symbol of elegance and reliability in the world of horology. The Submariner boasts a classic design, featuring a durable stainless steel case that is not only water-resistant but also resistant to corrosion and wear. It has a unidirectional rotating bezel, which is an essential feature for divers to track elapsed time underwater. One of the most distinctive features of the Submariner is its luminescent hour markers and hands, ensuring perfect legibility in low-light conditions or deep beneath the surface. The watch's movement is a Rolex in-house caliber, celebrated for its precision and reliability.  Whether you're a professional diver or someone who appreciates a watch that combines sportiness and style, the Rolex Submariner is an embodiment of timeless elegance and functionality, making it a sought-after timepiece for watch enthusiasts and collectors worldwide.",
+      "specifications": {
+        "Case diameter": "40 mm",
+        "Year of production": "2023",
+        "Case material": "Steel",
+        "Bracelet material": "Gold/Steel"
+      },
       "variations": [
         { "src": "/img/rolex-submariner.png" },
         { "src": "/img/rolex-submariner2.png" },
@@ -19,10 +26,20 @@
     },
     {
       "id": 2,
-      "name": "Louis Vuitton",
+      "name": "Louis Vuitton Mini Pochette",
       "price": 20,
       "src": "/img/louis-vuitton.png",
       "category": "bags",
+      "description": "The Louis Vuitton Mini Pochette is a petite yet elegant designer bag that combines practicality with style. Crafted with Louis Vuitton's iconic monogram canvas, this bag is a testament to the brand's rich heritage and luxury craftsmanship. This compact accessory features a zip-top closure and a detachable leather wrist strap. It's adorned with the classic Louis Vuitton monogram, showcasing the brand's timeless design. The interior is lined with textile lining and provides just enough space for essentials like cards, keys, or small cosmetics. The Louis Vuitton Mini Pochette is designed to be versatile, serving as both a standalone statement piece and as an organizer within a larger bag. Its compact size and lightweight design make it perfect for a night out, a special event, or a casual day when you want to travel light.",
+      "specifications": {
+        "Material": "Louis Vuitton Monogram Canvas",
+        "Color": "Classic monogram print",
+        "Strap": "Detachable leather wrist strap",
+        "Interior": "Textile lining",
+        "Closure": "Zip-top closure",
+        "Dimensions": "Approximately 5.5 x 3.5 x 0.8",
+        "Accompaniments": "Includes Louis Vuitton dust bag"
+      },
       "variations": [
         { "src": "/img/louis-vuitton.png" },
         { "src": "/img/louis-vuitton2.png" },
@@ -33,11 +50,18 @@
     },
     {
       "id": 3,
-      "name": "Omega Speedmaster",
+      "name": "Omega Speedmaster Co-Axial Master",
       "price": 10,
       "src": "/img/omega-speedmaster.png",
       "category": "watches",
-      "variations": [
+      "description": "The Omega Speedmaster Co-Axial Master is a legendary timepiece, celebrated for its exceptional precision and timeless design. This watch is a symbol of both innovation and history, proudly worn on the wrists of astronauts during space missions. It embodies a perfect blend of cutting-edge technology and classic aesthetics. The key feature of this masterpiece is the Co-Axial escapement, a remarkable Omega innovation that enhances accuracy and durability. The black dial with luminous hour markers and hands ensures excellent readability in any lighting condition. It boasts a chronograph function, adding practicality to its style. The stainless steel case, measuring 44mm in diameter and 13mm in thickness (including a 2mm crystal), combines robustness with elegance. The bracelet and case together weigh 155g, offering a balanced and comfortable fit. The watch represents an ultimate synthesis of style and substance.",
+      "specifications": {
+        "Case diameter": "42mm",
+        "Year of production": "2023",
+        "Case material": "Steel",
+        "Bracelet material": "Steel"
+      },
+     "variations": [
         { "src": "/img/omega-speedmaster.png" },
         { "src": "/img/omega-speedmaster2.png" },
         { "src": "/img/omega-speedmaster3.png" },
@@ -55,6 +79,16 @@
       "price": 10,
       "src": "/img/david-yurman.png",
       "category": "jewellery",
+      "description": "The David Yurman Cable Classics is an iconic jewelry collection known for its distinctive twisted cable motif. This timeless design is celebrated for its elegant simplicity and versatility. Crafted with meticulous attention to detail, these pieces often feature high-quality materials, such as sterling silver and 14k gold accents. One of the defining characteristics of the Cable Classics collection is the variation in cable thickness, allowing you to choose a style that suits your taste. Many pieces in the collection are adorned with exquisite gemstone embellishments, including diamonds and colored gemstones, adding an extra layer of luxury and charm. The collection typically includes a secure clasp for easy fastening, ensuring your jewelry remains in place. It is available in different sizes to cater to individual preferences, making it accessible to a wide range of wearers. David Yurman's commitment to excellence is evident not only in the design and materials but also in the elegant packaging that often accompanies these pieces. The signature packaging is a reflection of the brand's commitment to luxury and craftsmanship. The David Yurman Cable Classics collection is a timeless and versatile choice, perfect for those who appreciate the enduring beauty of classic design combined with high-quality materials and exquisite gemstone accents. It's an ideal addition to any jewelry collection, suitable for both everyday wear and special occasions.",
+      "specifications": {
+        "Design": "Iconic Cable Classics design with twisted cable motif",
+        "Materials": "High-quality materials, often sterling silver and 14k gold accents",
+        "Cable Thickness": "Various cable thickness options available",
+        "Stones": "May feature gemstone embellishments such as diamonds or colored gemstones",
+        "Clasp Type": "Secure clasp for easy fastening",
+        "Size Options": "Available in different sizes to suit individual preferences",
+        "Elegant Packaging": "Comes in David Yurman's signature packaging, perfect for gifting or safekeeping"
+        },
       "variations": [
         { "src": "/img/david-yurman.png" },
         { "src": "/img/david-yurman2.png" },
@@ -66,18 +100,23 @@
     },
     {
       "id": 5,
-      "name": "Vacheron Constantin",
+      "name": "Chanel J12 H1625",
       "price": 30,
-      "src": "/img/vacheron-Constantin.png",
+      "src": "/img/chanel-j12.png",
       "category": "watches",
-      "variations": [
-        { "src": "/img/vacheron-Constantin.png" },
-        { "src": "/img/vacheron-constantin2.png" },
-        { "src": "/img/vacheron-constantin3.png" },
-        { "src": "/img/vacheron-constantin4.png" },
-        { "src": "/img/vacheron-constantin5.png" },
-        { "src": "/img/vacheron-constantin6.png" },
-        { "src": "/img/vacheron-constantin7.png" }
+      "description": "The Chanel J12 H1625 is a true embodiment of elegance and sophistication. The Chanel J12 H1625 is powered by a precise automatic movement, ensuring you're always on time. Its scratch-resistant sapphire crystal protects the dial, making it as durable as it is beautiful., This timepiece seamlessly merges modern design with timeless charm, making it a coveted accessory for every occasion. The watch features a classic white ceramic case that exudes purity and refinement. The minimalist white dial with diamond hour markers adds a touch of luxury to your wrist. The diamond-set bezel beautifully complements the dial, making it a captivating piece of jewelry and an accurate timekeeper.",
+      "specifications": {
+        "Case diameter": "33mm",
+        "Year of production": "2019",
+        "Case material": "Ceramic",
+        "Bracelet material": "Ceramic"
+      },
+      "variations":[
+        { "src": "/img/chanel-j12.png" },
+        { "src": "/img/chanel-j12-2.png" },
+        { "src": "/img/chanel-j12-3.png" },
+        { "src": "/img/chanel-j12-4.png" },
+        { "src": "/img/chanel-j12-5.png" }
       ]
     },
     {
@@ -86,6 +125,18 @@
       "price": 30,
       "src": "/img/givenchy.png",
       "category": "bags",
+      "description": "The Givenchy Antigona Navy is characterized by its clean and structured silhouette, making it a statement piece for any outfit. It features a durable grained calfskin leather exterior in a rich navy hue, a color that exudes sophistication. The bag is adorned with the signature Givenchy logo in silver-tone hardware on the front, adding a touch of designer flair. The bag offers versatility with dual rolled top handles and a detachable, adjustable shoulder strap, allowing you to carry it in a way that best suits your style and needs. The spacious interior is lined with a luxurious fabric and includes multiple pockets, making it both chic and practical. The Antigona Navy is ideal for everyday use, whether for work or casual outings. Its timeless design ensures that it complements a wide range of ensembles, from formal to casual, making it a valuable addition to any fashion-forward wardrobe.",
+      "specifications": {
+        "Material": "Grained calfskin leather",
+        "Color": "Navy",
+        "Hardware": "Silver-tone Givenchy logo hardware",
+        "Handles": "Dual rolled top handles",
+        "Strap": "Detachable, adjustable shoulder strap",
+        "Interior": "Fabric lining with multiple pockets",
+        "Closure": "Zip-top closure",
+        "Dimensions": "Available in various sizes",
+        "Dust Bag": "Includes a Givenchy dust bag for storage and protection"
+      },
       "variations": [
         { "src": "/img/givenchy.png" },
         { "src": "/img/givenchy2.png" },
@@ -98,10 +149,17 @@
     },
     {
       "id": 7,
-      "name": "Tag Heuer Carrera",
+      "name": "Tag Heuer Carrera Calibre 16",
       "price": 40,
       "src": "/img/tag-heuer-carrera.png",
       "category": "watches",
+      "description": "The Tag Heuer Carrera Calibre 16 is a masterpiece of precision engineering and timeless design. Crafted with meticulous attention to detail, this watch represents a perfect blend of functionality and style. The watch features a sleek black dial with luminescent markers, offering excellent legibility day or night. The chronograph function adds a practical touch to this elegant timepiece.  The stainless steel case measures 41mm in diameter, providing a harmonious balance of size and comfort. The watch is powered by the Tag Heuer Calibre 16 automatic movement, ensuring precision and reliability.  The scratch-resistant sapphire crystal protects the watch's face, making it resilient to the demands of everyday life. The Tag Heuer Carrera Calibre 16 is a testament to the brand's commitment to quality and performance.",
+      "specifications": {
+        "Case diameter": "44 mm",
+        "Year of production": "2023",
+        "Case material": "Steel",
+        "Bracelet material": "Steel"
+      },
       "variations": [
         { "src": "/img/tag-heuer-carrera.png" },
         { "src": "/img/tag-heuer-carrera2.png" },
@@ -118,6 +176,13 @@
       "price": 30,
       "src": "/img/sony-Wireless-Noise-Canceling-Headphones.png",
       "category": "headphones",
+      "description": "The Sony WH-1000XM4 headphones represent the pinnacle of wireless noise-canceling technology, offering an immersive audio experience with a blend of comfort and convenience. These headphones are well-regarded for their exceptional noise-canceling capabilities, creating a tranquil listening environment by effectively blocking out external distractions. When it comes to sound quality, the WH-1000XM4 doesn't disappoint, delivering high-resolution audio that faithfully reproduces the nuances and details of your favorite music and audio content. Wearing these headphones is a comfortable experience, thanks to plush ear cushions and an adjustable headband designed for extended use. The headphones connect effortlessly to various devices through Bluetooth, making them versatile for use with smartphones, tablets, and laptops. You can enjoy an extended listening experience, as these headphones provide a long battery life on a single charge. Convenient touch controls on the earcups allow for easy music management, volume adjustment, and call handling. Voice assistant integration further enhances the user experience, enabling quick access to information and device control through voice commands. Plus, these headphones offer customizable sound profiles to tailor your listening experience to your personal preferences. The Sony WH-1000XM4 headphones are the go-to choice for discerning audiophiles, frequent travelers, and anyone seeking a premium audio experience, combined with cutting-edge noise-canceling technology, in a sleek and comfortable design.",
+      "specifications": {
+        "Noise Cancellation": " Industry-leading noise-canceling technology that blocks out external sounds for an immersive audio experience",
+        "Battery Life": "These headphones offer an impressive battery life of up to 30 hours on a single charge, ensuring long listening sessions",
+        "Audio Quality": " High-resolution audio support for exceptional sound quality, bringing out the subtle details in your music",
+        "Quick Charge:": "With just a 10-minute charge, you can enjoy up to 5 hours of playback, making them ideal for travelers and those on the go"
+      },
       "variations": [
         { "src": "/img/sony-Wireless-Noise-Canceling-Headphones.png" },
         { "src": "/img/sony-Wireless-Noise-Canceling-Headphones2.png" },
@@ -135,6 +200,17 @@
       "price": 40,
       "src": "/img/chanel.png",
       "category": "bags",
+      "description": "The Chanel Black Quilted Caviar Leather Jumbo is an exquisite and iconic designer handbag that exudes luxury and sophistication. Crafted with meticulous attention to detail, this bag embodies the timeless elegance that Chanel is renowned for. The bag features a beautifully quilted caviar leather exterior in a classic black hue, exuding a sense of timeless chic. The iconic Chanel CC logo is prominently displayed on the front flap, serving as a symbol of high fashion. The bag is equipped with a comfortable leather and chain shoulder strap, allowing for effortless and stylish wear. The spacious interior is lined with luxurious fabric and includes multiple compartments, providing ample space for your essentials. It's a versatile bag that seamlessly transitions from day to night, making it suitable for both formal and casual occasions. The Chanel Black Quilted Caviar Leather Jumbo is more than a handbag; it's a symbol of elegance, sophistication, and the enduring appeal of Chanel's design.",
+      "specifications": {
+        "Material": "Quilted caviar leather",
+        "Color": "Black",
+        "Hardware": "Silver-tone",
+        "Strap": "Leather and chain shoulder strap",
+        "Interior": "Fabric lining with multiple compartments",
+        "Closure": "Classic Chanel flap with turn-lock closure",
+        "Dimensions": "Approximately 11.8 x 7.9 x 3.9",
+        "Accompaniments": "Includes Chanel dust bag and authenticity card"
+        },
       "variations": [
         { "src": "/img/chanel.png" },
         { "src": "/img/chanel2.png" },
@@ -148,10 +224,17 @@
     },
     {
       "id": 10,
-      "name": "Patek Philippe",
+      "name": "Patek Philippe Nautilus - 5711/1A-010",
       "price": 50,
       "src": "/img/patek-philippe.png",
       "category": "watches",
+      "description": "The Patek Philippe Nautilus 5711/1A-010 is the epitome of horological artistry and luxury. Exemplifying the brand's commitment to timeless design and impeccable craftsmanship, this iconic timepiece is a true masterpiece. The watch features a beautifully balanced 40mm stainless steel case, its elegant and distinctive octagonal bezel complemented by a deep blue dial that exudes sophistication. The luminous markers and hands provide exceptional legibility, while the date function adds practicality. The integrated stainless steel bracelet is not only comfortable but also a design marvel, creating a seamless look. Underneath the surface, this timepiece houses the Patek Philippe Caliber 324 S C, a self-winding movement renowned for its precision and reliability. The Nautilus 5711/1A-010 is the embodiment of understated luxury, and it's highly sought after by collectors and watch enthusiasts alike, representing a harmonious blend of style, functionality, and heritage.",
+      "specifications": {
+        "Case diameter": "40 x 38 mm",
+        "Year of production": "2018",
+        "Case material": "Steel",
+        "Bracelet material": "Steel"
+      },
       "variations": [
         { "src": "/img/patek-philippe.png" },
         { "src": "/img/patek-philippe2.png" },
@@ -168,6 +251,17 @@
       "price": 50,
       "src": "/img/gucci.png",
       "category": "bags",
+      "description": "The GG Marmont Small Shoulder Bag is a stylish and iconic accessory from the luxury fashion house Gucci. It's renowned for its blend of contemporary design and classic elegance, making it a versatile choice for a wide range of fashion-forward individuals. This small shoulder bag features Gucci's signature matelassé leather, which showcases the iconic double G logo in a quilted pattern. The antique gold-tone hardware adds a touch of sophistication to the design. The bag can be carried as a shoulder bag or worn as a crossbody, thanks to the chain and leather strap, offering versatile styling options. The interior is lined with a suede-like microfiber lining, providing a touch of luxury. It includes a zip pocket for secure storage. The flap closure with the double G hardware is not only stylish but also keeps your belongings safe. The GG Marmont Small Shoulder Bag is perfect for various occasions, whether it's a casual day out or an evening event. Its compact size and sleek design make it a chic and practical choice for those who appreciate the fusion of modern aesthetics and classic Gucci style.",
+      "specifications": {
+        "Material": "Matelassé leather",
+        "Color": "Various color options available",
+        "Hardware": "Antique gold-tone hardware",
+        "Strap": "Chain and leather shoulder strap",
+        "Interior": "Microfiber lining with a zip pocket",
+        "Closure": "Flap closure with double G hardware",
+        "Dimensions": "Approximately 10 x 6 x 3",
+        "Accompaniments": "Includes Gucci dust bag and authenticity card"
+        },
       "variations": [
         { "src": "/img/gucci.png" },
         { "src": "/img/gucci2.png" },
@@ -179,10 +273,17 @@
     },
     {
       "id": 12,
-      "name": "Audemars Piguet",
+      "name": "AUDEMARS PIGUET ROYAL OAK 37MM",
       "price": 50,
       "src": "/img/audemars-piguet-royal-oak.png",
+      "description": "The Audemars Piguet Royal Oak 37mm is a masterpiece of timeless elegance and precision. This iconic timepiece, crafted by the renowned Swiss watchmaker, Audemars Piguet, combines classic design with contemporary luxury. The watch features a 37mm case, striking in its simplicity and sophistication, with a signature octagonal bezel and a stunning dial. It boasts exceptional craftsmanship, a high-quality automatic movement, and a beautifully designed bracelet or leather strap. The Royal Oak 37mm is a symbol of refined taste and is sought after by watch connoisseurs worldwide, representing the epitome of horological excellence.",
       "category": "watches",
+      "specifications": {
+        "Case diameter": "37 mm",
+        "Year of production": "2020",
+        "Case material": "Rose gold",
+        "Bracelet material": "Rose gold"
+      },
       "variations": [
         { "src": "/img/audemars-piguet-royal-oak.png" },
         { "src": "/img/audemars-piguet-royal-oak2.png" },
@@ -201,6 +302,14 @@
       "price": 10,
       "src": "/img/kendra-scott.png",
       "category": "jewellery",
+      "description": "The Kendra Scott Elisa Pendant Necklace is a timeless and versatile piece of jewelry that effortlessly combines elegance and simplicity. Its beauty lies in its understated design, making it a classic addition to any jewelry collection. The necklace features a single, dainty stone pendant that comes in various colors and materials, allowing you to choose one that resonates with your personal style. The stone is delicately set in a metal bezel and hangs from a fine, adjustable chain. This design adds a touch of sophistication to any outfit without being overly ornate. Kendra Scott's attention to detail is evident in the high-quality materials used in the necklace's construction. The pendant often comes in genuine stones, including variations like drusy, iridescent opal, or colorful gemstones, and the metal options include 14k gold, rose gold, or rhodium. This pendant necklace is a versatile accessory that can be worn daily or dressed up for special occasions. It's perfect for layering with other necklaces to create a customized look that reflects your unique style.",
+      "specifications": {
+        "Pendant Design": "Dainty stone pendant with various stone and metal options",
+        "Chain Length": "Adjustable chain length for versatility",
+        "Closure": "Secure clasp to keep the necklace in place",
+        "Materials": "Genuine stone pendant options, including drusy, iridescent opal, or colorful gemstones, with metal options of 14k gold, rose gold, or rhodium",
+        "Elegant Packaging": "Often comes in Kendra Scott's signature packaging, making it ideal for gifting or safekeeping"
+        },
       "variations": [
         { "src": "/img/kendra-scott.png" },
         { "src": "/img/kendra-scott2.png" },
@@ -211,18 +320,24 @@
     },
     {
       "id": 14,
-      "name": "Breitling-Navitimer B01",
+      "name": "Breitling-Navitimer B01 46",
       "price": 50,
       "src": "/img/breitling-navitimer.png",
       "category": "watches",
+      "description": "The Breitling Navitimer B01 46 is an aviation-inspired timepiece that seamlessly blends iconic design with exceptional functionality. As a testament to Breitling's rich heritage in aviation watches, the Navitimer is a classic pilot's watch, and the B01 46mm model takes it to the next level. This watch boasts a substantial 46mm stainless steel case, striking in its presence, and features the famous circular slide rule on the bi-directional rotating bezel, a nod to its pilot's tool origins. The black dial with contrasting subdials exudes elegance and provides superior readability, while the chronograph function adds versatility for timing and precision.  Powering this timepiece is Breitling's in-house Caliber B01 movement, celebrated for its accuracy and reliability. The stainless steel bracelet or leather strap options ensure comfort and style. The Navitimer B01 46 is the perfect companion for those who appreciate a blend of aviation history and modern luxury, making it a favorite choice among aviation and watch enthusiasts alike.",
+      "specifications": {
+        "Case diameter": "46 mm",
+        "Year of production": "2023",
+        "Case material": "Steel",
+        "Bracelet material": "Steel"
+      },
       "variations": [
         { "src": "/img/breitling-navitimer.png" },
         { "src": "/img/breitling-navitimer2.png" },
         { "src": "/img/breitling-navitimer3.png" },
         { "src": "/img/breitling-navitimer4.png" },
         { "src": "/img/breitling-navitimer5.png" },
-        { "src": "/img/breitling-navitimer6.png" },
-        { "src": "/img/breitling-navitimer7.png" }
+        { "src": "/img/breitling-navitimer6.png" }
       ]
     },
     {
@@ -231,6 +346,14 @@
       "price": 30,
       "src": "/img/bose-Wireless-Noise-Cancelin-Headphones.png",
       "category": "headphones",
+      "description": "The Bose QuietComfort 35 II wireless noise-canceling headphones are celebrated for their exceptional audio quality and industry-leading noise-cancellation technology. They offer immersive sound, all-day comfort, and seamless wireless connectivity. With a battery life of up to 20 hours, they're perfect for extended use. Voice assistant integration and customizable noise-cancellation settings further enhance the user experience. These headphones are a top choice for those who seek a blend of superior audio quality and comfort, making them suitable for both leisure and professional use",
+      "specifications": {
+        "Noise Cancellation": "World-class noise-cancellation technology to create a quiet listening space",
+        "Battery Life": "Up to 20 hours of wireless playback on a single charge, with the option for a wired connection when needed",
+        "Audio Quality": "Crystal-clear audio reproduction with balanced sound and deep bass",
+        "Quick Charge:": "Lightweight and comfortable design for all-day wear"
+      },
+
       "variations": [
         { "src": "/img/bose-Wireless-Noise-Cancelin-Headphones.png" },
         { "src": "/img/bose-Wireless-Noise-Cancelin-Headphones2.png" },
@@ -247,6 +370,16 @@
       "price": 50,
       "src": "/img/prada-galleria.png",
       "category": "bags",
+      "description": "The Prada Galleria Saffiano Leather Bag is a fashion icon, renowned for its sophisticated design and exquisite craftsmanship. It embodies the essence of timeless luxury and versatility, making it a statement piece for the modern woman. This elegant bag features Prada's signature Saffiano leather, known for its distinctive crosshatch texture and durability. The double handles and detachable, adjustable leather shoulder strap offer multiple carrying options, allowing you to tailor your style to various occasions. The interior is lined with Prada's signature logo jacquard fabric and includes multiple compartments, making it an ideal choice for those who require both style and functionality. The bag's iconic triangular Prada logo plaque is a symbol of prestige and sophistication.  The Prada Galleria Saffiano Leather Bag is perfect for everyday use, whether for work, shopping, or social gatherings. Its timeless design ensures it complements a wide range of outfits, from business attire to casual wear.",
+      "specifications": {
+        "Material": "Saffiano leather",
+        "Color": "Various color options available",
+        "Handles": "Double leather handles and detachable, adjustable leather shoulder strap",
+        "Interior": "Logo jacquard fabric lining with multiple compartments",
+        "Closure": "Zip-top closure",
+        "Dimensions": "Approximately 12.2 x 9.2 x 5.9",
+        "Accompaniments": "Includes Prada dust bag and authenticity card"
+      },
       "variations": [
         { "src": "/img/prada-galleria.png" },
         { "src": "/img/prada-galleria2.png" },
@@ -259,10 +392,17 @@
     },
     {
       "id": 17,
-      "name": "IWC-Portugies",
+      "name": "IWC Portugieser 41 mm",
       "price": 50,
       "src": "/img/portugieser.png",
       "category": "watches",
+      "description": "The IWC Portugieser collection by IWC Schaffhausen represents a commitment to watchmaking excellence. Inspired by Portugal's maritime heritage, these timepieces showcase timeless elegance, a diverse array of complications, slim profiles, precision movements, high-quality materials, and luxurious leather straps. These watches are a symbol of classic design and modern watchmaking expertise.",
+      "specifications": {
+        "Case diameter": "41 mm",
+        "Year of production": "2020",
+        "Case material": "Steel",
+        "Bracelet material": "Crocodile skin"
+      },
       "variations": [
         { "src": "/img/portugieser.png" },
         { "src": "/img/portugieser2.png" },
@@ -279,6 +419,13 @@
       "price": 50,
       "src": "/img/Sennheiser-Momentum.png",
       "category": "headphones",
+      "description": "The Sennheiser Momentum 3 wireless noise-canceling headphones offer an immersive listening experience with top-tier audio quality and premium design. These headphones are celebrated for their robust noise-cancellation technology, creating a serene listening environment.  Crafted with high-quality materials, they provide a luxurious and comfortable fit. Wireless versatility, long battery life, and touch controls make them convenient for on-the-go use. Voice assistant integration adds further convenience. With Sennheiser's renowned audio technology, you can expect a rich and detailed sound profile, ensuring every note in your music is faithfully reproduced. The Momentum 3 headphones are a perfect choice for those who value premium sound quality and comfort in a stylish package.",
+      "specifications": {
+        "Noise Cancellation": "Advanced noise-cancellation technology for a serene listening environment.",
+        "Battery Life": "Up to 17 hours of wireless playback, ensuring long-lasting performance",
+        "Audio Quality": " Exceptional sound quality with a well-balanced and detailed sound signature",
+        "Quick Charge:": "Premium materials and craftsmanship for a comfortable and luxurious experience"
+      },
       "variations": [
         { "src": "/img/Sennheiser-Momentum.png" },
         { "src": "/img/Sennheiser-Momentum2.png" },
@@ -291,10 +438,19 @@
     },
     {
       "id": 19,
-      "name": " Razer Nari Ultimate (Wireless Gaming Headset)",
+      "name": "Razer Nari Ultimate (Wireless Gaming Headset)",
       "price": 50,
       "src": "/img/razer-nari-ultimate.png",
       "category": "headphones",
+      "description": "The Razer Nari Ultimate is a wireless gaming headset designed to provide gamers with an immersive audio experience. These headphones stand out with unique haptic feedback technology that enhances gaming immersion. They offer wireless freedom, THX Spatial Audio, comfortable cooling gel-infused ear cushions, a retractable microphone, and an extensive wireless range. The Razer Nari Ultimate is an excellent choice for gamers seeking to elevate their gaming experience with innovative features.",
+      "specifications": {
+        "Audio Quality": "High-quality audio reproduction with THX Spatial Audio",
+        "Haptic Feedback": "Unique haptic feedback technology for an immersive gaming experience",
+        "Wireless Connectivity": "Seamless wireless connectivity for gaming without wires",
+        "Microphone": "Retractable microphone for clear in-game communication",
+        "Comfort": " Comfortable design with cooling gel-infused ear cushions",
+        "Battery Life": "Battery life that supports extended gaming sessions"
+      },
       "variations": [
         { "src": "/img/razer-nari-ultimate.png" },
         { "src": "/img/razer-nari-ultimate2.png" },
@@ -306,10 +462,17 @@
     },
     {
       "id": 20,
-      "name": "Seiko Prospex",
+      "name": "Seiko Prospex SRPE39K",
       "price": 50,
       "src": "/img/seiko-prospex.png",
       "category": "watches",
+      "description": "The Seiko Prospex SRPE39K is a true adventurer's timepiece, designed to meet the demands of both land and sea exploration. Part of Seiko's renowned Prospex (Professional Specifications) collection, this watch is a symbol of durability, precision, and reliability. The SRPE39K features a rugged stainless steel case with a diameter of [specify the diameter], paired with a unidirectional rotating bezel that offers exceptional functionality for tracking elapsed time. Its bold black dial, equipped with luminous markers and hands, ensures clear visibility even in low-light conditions. This timepiece houses a robust automatic movement, offering both accuracy and longevity. The date function adds practicality to its overall appeal. The watch's bracelet or strap is not only comfortable but also built to withstand the rigors of outdoor adventures. The Seiko Prospex SRPE39K is more than just a watch; it's a reliable companion for those who seek adventure and exploration, embodying Seiko's commitment to quality and performance.",
+      "specifications": {
+        "Case diameter": "45 x 47.7 mm",
+        "Year of production": "2020",
+        "Case material": "Steel",
+        "Bracelet material": "Steel"
+      },
       "variations": [
         { "src": "/img/seiko-prospex.png" },
         { "src": "/img/seiko-prospex2.png" },
@@ -326,6 +489,15 @@
       "price": 10,
       "src": "/img/cartier-love.png",
       "category": "jewellery",
+      "description": "The Cartier Love Necklace is an iconic jewelry piece that encapsulates both sophistication and sentimental value. It is a symbol of enduring love and commitment. Crafted with precision and elegance, this necklace features the famous Cartier Love design in a delicate pendant.  The pendant is designed in the shape of the iconic Love bracelet, with the distinctive screw motifs. The symbolism of these motifs represents the unbreakable bond of love. The pendant is usually made from high-quality materials such as 18k gold, white gold, or platinum, ensuring both durability and a lustrous appearance. The Cartier Love Necklace is not only a fashion statement but also carries deep sentimental significance. It's a popular choice for gifting on special occasions such as anniversaries, birthdays, or to mark a momentous commitment. The necklace is designed to be close to the heart, a constant reminder of the love shared between two people. With its timeless and versatile design, this necklace can be worn daily or saved for special occasions. It's a piece of jewelry that transcends fashion trends, making it a cherished heirloom for generations to come.",
+      "specifications": {
+      "Pendant Design": "Iconic Cartier Love bracelet motif",
+        "Materials": "Crafted from 18k gold, white gold, or platinum",
+        "Chain Type": "Fine and elegant chain, designed to complement the pendant",
+        "Closure": "Secure clasp to keep the necklace in place",
+        "Length": "Various lengths available to suit individual preferences",
+        "Iconic Packaging": "Comes in Cartier's iconic red box, symbolizing luxury and elegance"
+        },
       "variations": [
         { "src": "/img/cartier-love.png" },
         { "src": "/img/cartier-love2.png" },
@@ -342,6 +514,13 @@
       "price": 50,
       "src": "/img/tudor-black-bay-ceramic.png",
       "category": "watches",
+      "description": "The Tudor Black Bay Ceramic stands as a testament to Tudor's commitment to crafting durable and sophisticated timepieces. With a ceramic case, it not only exudes contemporary style but also offers exceptional scratch resistance, ensuring it looks as stunning as the day it was acquired. The black dial and bezel provide a striking contrast, giving it the classic and bold appearance characteristic of a diver's watch. Under low-light conditions or deep underwater, the watch remains highly legible thanks to its luminous markers and hands. It features an automatic movement that keeps precise time, making it a reliable companion for any occasion. Designed with adventure in mind, the Tudor Black Bay Ceramic typically offers a high level of water resistance, making it suitable for diving and water-related activities. Whether worn on a bracelet or a strap, it combines form and function, catering to individual preferences. The Tudor Black Bay Ceramic is the perfect choice for those who seek a watch that seamlessly blends contemporary materials with a timeless design, offering both style and substance.",
+      "specifications": {
+        "Case diameter": "41 mm",
+        "Year of production": "2022",
+        "Case material": "Ceramic",
+        "Bracelet material": "Leather"
+      },
       "variations": [
         { "src": "/img/tudor-black-bay-ceramic.png" },
         { "src": "/img/tudor-black-bay-ceramic2.png" },
@@ -359,6 +538,19 @@
       "price": 50,
       "src": "/img/apple-airpods-pro.png",
       "category": "headphones",
+      "description": "The Apple AirPods Pro are advanced wireless earbuds, celebrated for their active noise-cancellation technology. They adapt to the unique shape of your ear for a rich and immersive sound experience. Designed for versatility, they are sweat and water-resistant, ideal for workouts. With easy touch controls and voice assistant support, these earbuds offer convenience on the go. Plus, they provide up to 4.5 hours of continuous listening with an additional 24 hours using the wireless charging case. Apple AirPods Pro are the epitome of wireless audio, offering both convenience and premium sound quality",
+      "specifications": {
+        "Active Noise Cancellation": "The AirPods Pro feature active noise cancellation technology for an immersive and distraction-free listening experience",
+        "Adaptive EQ": "They come with adaptive EQ, which automatically tunes the low and mid frequencies to the shape of your ear for a rich and consistent audio experience",
+        "Transparency Mode": "This mode allows you to hear your surroundings while listening to music, useful for staying aware of your environment",
+        "Sweat and Water-Resistant": "These earbuds have an IPX4 rating, making them sweat and water-resistant, suitable for workouts and outdoor activities",
+        "Customizable Controls": "You can control music playback, calls, and activation of Siri with touch controls on the earbuds",
+        "Audio Sharing": "Share audio between two sets of AirPods Pro from a single iPhone",
+        "Battery Life": "The earbuds offer up to 4.5 hours of listening time on a single charge, with up to 24 hours of total listening time with the charging case",
+        "Wireless Charging": "They support wireless charging, offering convenience when charging",
+        "Bluetooth Connectivity": "These earbuds connect seamlessly to Apple devices through Bluetooth"
+
+      },
       "variations": [
         { "src": "/img/apple-airpods-pro.png" },
         { "src": "/img/apple-airpods-pro2.png" },
@@ -370,10 +562,17 @@
     },
     {
       "id": 24,
-      "name": "Omega De Ville",
+      "name": "Omega De Ville Trésor - Hodinkee",
       "price": 50,
       "src": "/img/omega-de-ville.png",
       "category": "watches",
+      "description": "The Omega De Ville Trésor - Hodinkee is a special edition timepiece born from the collaboration between Omega and the respected watch publication Hodinkee. This watch, belonging to the De Ville Trésor collection, is characterized by its classic design, slim profile, manual movement, and high-quality materials. The Hodinkee edition adds an extra touch of exclusivity and craftsmanship to this already elegant line of watches.",
+      "specifications": {
+        "Case diameter": "32 mm",
+        "Year of production": "1948",
+        "Case material": "Rose gold",
+        "Bracelet material": "Leather"
+      },
       "variations": [
         { "src": "/img/omega-de-ville.png" },
         { "src": "/img/omega-de-ville2.png" },
@@ -381,7 +580,8 @@
         { "src": "/img/omega-de-ville4.png" },
         { "src": "/img/omega-de-ville5.png" },
         { "src": "/img/omega-de-ville6.png" },
-        { "src": "/img/omega-de-ville7.png" }
+        { "src": "/img/omega-de-ville7.png" },
+        { "src": "/img/omega-de-ville8.png" }
       ]
     },
     {
@@ -390,6 +590,16 @@
       "price": 10,
       "src": "/img/swarovski.png",
       "category": "jewellery",
+      "description": "The Swarovski Angelic Square Necklace is a dazzling piece of jewelry that exudes elegance and charm. With its delicate design, it adds a touch of sophistication to any outfit. This necklace features a stunning square-cut Swarovski crystal, which catches and reflects light beautifully, creating a captivating sparkle that draws attention. Crafted with precision and care, the necklace combines the brilliance of Swarovski crystals with a rhodium-plated chain, which not only complements the crystal's sparkle but also ensures the necklace's longevity. The square-cut crystal is surrounded by a halo of smaller clear crystals, enhancing the overall radiance and creating a mesmerizing focal point. The Swarovski Angelic Square Necklace is a versatile accessory suitable for various occasions, from formal events to everyday wear. It adds a touch of glamour and can be worn alone or layered with other necklaces for a personalized and chic look. Whether it's a special gift or a self-indulgence, this necklace is a symbol of timeless beauty.",
+      "specifications": {
+        "Crystal Type": "Swarovski crystal",
+        "Crystal Cut": "Square",
+        "Chain Material": "Rhodium-plated metal",
+        "Halo Stones": "Clear Swarovski crystals",
+        "Length": "Adjustable chain length for versatility",
+        "Closure": "Lobster clasp",
+        "Elegant Gift Box": "Comes with a Swarovski gift box for safekeeping or gifting"
+        },
       "variations": [
         { "src": "/img/swarovski.png" },
         { "src": "/img/swarovski2.png" },
@@ -400,10 +610,17 @@
     },
     {
       "id": 26,
-      "name": "IWC Portofino",
+      "name": "IWC Portofino 42 mm",
       "price": 50,
       "src": "/img/iwc-portofino.png",
       "category": "watches",
+      "description": "The IWC Portofino 42mm is a testament to IWC Schaffhausen's commitment to crafting timeless and versatile timepieces. Its classic and clean design, with a versatile 42mm case size, ensures it can be comfortably worn on a range of occasions, from formal events to everyday life. The watch features an automatic movement for precise timekeeping and is constructed from high-quality materials, which are a hallmark of IWC's watchmaking tradition. The Portofino 42mm is a versatile and stylish choice for those who value a balance of simplicity and sophistication in their timepiece.",
+      "specifications": {
+        "Case diameter": "42 mm",
+        "Year of production": "2023",
+        "Case material": "Steel",
+        "Bezel material": "Steel"
+      },
       "variations": [
         { "src": "/img/iwc-portofino.png" },
         { "src": "/img/iwc-portofino2.png" },
@@ -421,6 +638,15 @@
       "price": 50,
       "src": "/img/jbl-everest-elite.png",
       "category": "headphones",
+      "description": "The JBL Everest Elite 750NC wireless noise-canceling headphones are engineered to deliver an elevated audio experience through advanced technology. These headphones are acclaimed for their active noise-cancellation feature, which effectively minimizes external distractions, allowing you to fully immerse yourself in your audio content.  These headphones offer seamless Bluetooth connectivity, ensuring a straightforward pairing process with your devices. What sets them apart is the ability to customize your sound profile through the JBL My Headphones app. This feature tailors the audio to your personal preferences, ensuring that every note is delivered just as you like it. Designed for comfort during extended wear, the Everest Elite 750NC headphones feature ergonomically designed ear cushions and a lightweight build. This makes them perfect for long listening sessions, whether you're on the go or relaxing at home. The headphones come with an echo-canceling microphone, ensuring that your calls and voice commands are crystal clear. The foldable design allows for easy storage and portability, making them a versatile choice for your audio needs. The JBL Everest Elite 750NC headphones provide an immersive audio experience with active noise-cancellation, personalized sound profiles, and a comfortable design. They cater to those who prioritize sound quality, convenience, and a customizable listening experience.",
+      "specifications": {
+        "Noise Cancellation": "Active noise-cancellation technology for a distraction-free audio experience",
+        "Battery Life": "Up to 20 hours of wireless playback on a single charge",
+        "Wireless Connectivity": "Seamless Bluetooth connectivity for a wireless listening experience",
+        "Custom Sound Profiles": "Customizable sound profiles through the My Headphones app",
+        "Design": "Comfortable and foldable design for convenience and portability",
+        "Microphone": "Echo-canceling microphone for clear calls and voice commands"
+        },
       "variations": [
         { "src": "/img/jbl-everest-elite.png" },
         { "src": "/img/jbl-everest-elite2.png" },
@@ -429,17 +655,6 @@
         { "src": "/img/jbl-everest-elite5.png" },
         { "src": "/img/jbl-everest-elite6.png" }
       ]
-    }
-  ],
-
-  "person": [
-    {
-      "id": 1,
-      "name": "george"
-    },
-    {
-      "id": 2,
-      "name": "clarissa"
     }
   ]
 }

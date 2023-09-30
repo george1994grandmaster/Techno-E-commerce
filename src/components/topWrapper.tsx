@@ -38,10 +38,12 @@ const TopWrapper: FC = () => {
   ];
 
   return allowedPaths.some(path => path.test(currentPath as string)) ? (
-    <div className="bg-light py-7 px-10">
-      <StyledTypography variant="h2" fontSize="22px" fontWeight="600" color="rgba(0, 0, 0, 0.88)">
-        {topContentValue}
-      </StyledTypography>
+    <div className="bg-light py-7">
+      <div className="container">
+        <StyledTypography variant="h2" fontSize="22px" fontWeight="600" color="rgba(0, 0, 0, 0.88)">
+          {topContentValue}
+        </StyledTypography>
+      </div>
     </div>
   ) : null;
 }

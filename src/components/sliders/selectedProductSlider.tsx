@@ -3,8 +3,6 @@ import { SliderProps } from "../../types";
 import VerticalSlider from "./verticalSlider";
 import NavigatedSlider from "./navigatedSlider";
 
-
-
 const SelectedProductSlider: FC<SliderProps> = ({sliderParams})=> {
   
   return (

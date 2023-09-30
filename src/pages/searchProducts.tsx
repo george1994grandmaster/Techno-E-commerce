@@ -14,26 +14,30 @@ const SearchProducts: FC = () => {
   },[dispatch, productQuery]);
 
   
-return (
+  return (
     <>
-      <div className="productList-container">
-        {products && (
-          products.map((product: Product) => (
-            <div className="card" key={product.id}>
-              <Link to={`/products/detail/${product.id}`} key={product.id}  style={{display: "block", }}>
-                <div className="d-flex fd-column jc-center ai-center">
-                  <div style={{width: "100%"}}>
-                    <img src={product.src} alt="product" style={{display: "block"}}/>
-                  </div>
-                  <div className="card-body">
-                    <h3 style={{fontSize: "16px"}}>{product.name}</h3>
-                    <h3 style={{fontSize: "16px"}}>{product.price}</h3>
-                  </div>
+      <div className="py-10" style={{backgroundColor: "rgb(242, 242, 242)"}}>
+        <div className="container">
+          <div className="productList-container">
+            {products && (
+              products.map((product: Product) => (
+                <div className="card" key={product.id}>
+                  <Link to={`/products/detail/${product.id}`} key={product.id}  style={{display: "block", }}>
+                    <div className="d-flex fd-column jc-center ai-center">
+                      <div style={{width: "100%"}}>
+                        <img src={product.src} alt="product" style={{display: "block"}}/>
+                      </div>
+                      <div className="card-body">
+                        <h3 style={{fontSize: "16px"}}>{product.name}</h3>
+                        <h3 style={{fontSize: "16px"}}>{product.price}</h3>
+                      </div>
+                    </div>
+                  </Link>
                 </div>
-              </Link>
-            </div>
-          ))
-        )}
+              ))
+            )}
+          </div>
+        </div>
       </div>
     </>
   );

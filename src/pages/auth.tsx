@@ -21,17 +21,21 @@ const Form: FC = () => {
   return (
     
     <>
-      <div className="d-flex jc-center">
-        <div className="xs-12 sm-9 lg-6">
-          <div className={`option-btn-layout ${formType === 'log in' ? 'left' : 'right'}`}>
-            <div className="option-btn-content">
-              <MainBtn text="Log In" bgColor="transparent" color="#00381f" innerSpacing="10px 15px" onClick={() => selectFormHandle("log in")}/>
+      <div className="py-10" style={{backgroundColor: "rgb(242, 242, 242)"}}>
+        <div className="container">
+          <div className="d-flex jc-center">
+          <div className="xs-12 sm-9 lg-6">
+            <div className={`option-btn-layout ${formType === 'log in' ? 'left' : 'right'}`}>
+              <div className="option-btn-content">
+                <MainBtn text="Log In" bgColor="transparent" color="#00381f" innerSpacing="10px 15px" onClick={() => selectFormHandle("log in")}/>
+              </div>
+              <div className="option-btn-content">
+                <MainBtn text="Create Account" bgColor="transparent" color="#00381f" innerSpacing="10px 15px" onClick={() => selectFormHandle("register")}/> 
+              </div>
             </div>
-            <div className="option-btn-content">
-              <MainBtn text="Create Account" bgColor="transparent" color="#00381f" innerSpacing="10px 15px" onClick={() => selectFormHandle("register")}/> 
-            </div>
+            <FormOptional formType={formType}/>
           </div>
-          <FormOptional formType={formType}/>
+          </div>
         </div>
       </div>
     </> 

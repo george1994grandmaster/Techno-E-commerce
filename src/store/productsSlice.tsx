@@ -97,6 +97,7 @@ const productsSlice = createSlice({
 
 export const { filterProductsByLetter, filterProductsByCategories, filterProductsById, addToCart, decreaseFromCart, removeFromCart} = productsSlice.actions;
 export default productsSlice.reducer;
+export const selectLoading = (state: RootStore) => state.products.loading;
 export const selectAllProducts = (state: RootStore) => state.products.allProducts;
 export const selectSearchedProduts = (state: RootStore) => state.products.searchedProducts;
 export const selectProducts = (state: RootStore) => state.products.products;

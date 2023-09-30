@@ -17,11 +17,13 @@ export interface Product {
   id: number;
   name: string;
   price: number;
-  quantity: number;
-  totalPrice: number;
+  quantity: Partial<number>;
+  totalPrice: Partial<number>;
   src: string;
-  category: string;
-  variations: Variation[];
+  category: Partial<string>;
+  description: Partial<string>;
+  specifications: { [key: string]: string };
+  variations: Partial<[]>;
 }
 
 export interface Variation {
@@ -36,8 +38,10 @@ export interface ContentValue extends Condition {
   contentValue: string;
 }
 
+
+
 export interface SliderProps {
-  sliderParams: Variation[] | [];
+  sliderParams: Product[]
   sliderName?: string;
 }
 
@@ -45,16 +49,19 @@ export interface CurrentSlideIndex {
  slideIndex: number | null;
 }
 
-export interface sidebarCondition {
-  isSidebarOpen: boolean;
- }
-
-
 export interface SidebarCondition {
-  //sidebarCondition: boolean;
-  //closeSidebar: () => void;
+  isSidebarOpen: boolean;
 }
- 
+
+export interface HomePageContent {
+  src: string;
+  title: string;
+  text: string;
+}
+
+export interface PresentContent extends Condition {
+  content: HomePageContent; // Indicate that content is an object with these properties
+}
 
 
 

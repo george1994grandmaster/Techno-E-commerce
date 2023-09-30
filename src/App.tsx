@@ -1,5 +1,8 @@
+import { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './pages/layout';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchProducts, selectLoading } from './store/productsSlice';
 import Home from './pages/home'; 
 import ProductList from './pages/productList'; 
 import ShoppingCart from './pages/shoppingCart';
@@ -10,6 +13,17 @@ import Contact from './pages/contact';
 import Category from './pages/categories';
 
 const App = () => {
+
+  const dispatch = useDispatch();
+  const loading = useSelector(selectLoading);
+
+  useEffect(() => {
+    dispatch(fetchProducts() as any);
+  }, [dispatch]);
+
+  if (loading === 'pending') {
+    return null;
+  }
   
   return (
     <div className='App'>

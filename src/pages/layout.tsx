@@ -15,13 +15,9 @@ const Layout: FC = () => {
     <>
       <Header />
       <div className="container-fluid">
-        <div className="top-wrapper">
-          <TopWrapper/>
-        </div>
-        <div className="py-10" style={{backgroundColor: "rgb(242, 242, 242)"}}>
-          <div className="container">
-            <Outlet />
-          </div>
+        <TopWrapper/>
+       <div>
+          <Outlet />
         </div>
         <div className="bottom-wrapper">
           <BottomWrapper />

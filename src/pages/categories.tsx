@@ -8,6 +8,7 @@ import { Product } from '../types';
 const Categories: FC = () => {
 
   const { productCategory } = useParams<{ productCategory: string }>();
+  console.log(productCategory)
   const dispatch = useDispatch();
   const categoryProducts = useSelector(selectProducts);
 
@@ -21,12 +22,13 @@ const Categories: FC = () => {
 
   return (
     <>
-    <div className="productList-container">
-        {categoryProducts &&
-           categoryProducts.map((product: Product) => (
-            <div className="card" key={product.id}>
-              <Link to={`/products/detail/${product.id}`} key={product.id} style={{ display: 'block' }}>
-                <div className="d-flex fd-column jc-center ai-center">
+      <div className="py-10" style={{backgroundColor: "rgb(242, 242, 242)"}}>
+        <div className="container">
+          <div className="productList-container">
+            {categoryProducts && 
+              categoryProducts.map((product: Product) => (
+              <div className="card" key={product.id}>
+                <Link to={`/products/detail/${product.id}`} key={product.id}>
                   <div style={{ width: '100%'}}>
                     <img src={product.src} alt="product" style={{ display: 'block' }} />
                   </div>
@@ -40,10 +42,11 @@ const Categories: FC = () => {
                       {product.price}
                     </StyledTypography>
                   </div>
-                </div>
-              </Link>
-            </div>
-          ))}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </>
   )

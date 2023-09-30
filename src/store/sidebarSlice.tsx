@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import { RootStore } from './store';
-import { sidebarCondition } from '../types';
+import { SidebarCondition } from '../types';
 
-const initialState: sidebarCondition = {
+const initialState: SidebarCondition = {
   isSidebarOpen: false
 };
 

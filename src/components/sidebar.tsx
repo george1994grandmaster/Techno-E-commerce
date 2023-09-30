@@ -7,7 +7,7 @@ import Button from "./button";
 import { CloseBtn } from "./svgFormat";
 import { SidebarCondition } from "../types";
 
-const Sidebar: FC<SidebarCondition> = (/*{ sidebarCondition, closeSidebar }*/) => {
+const Sidebar: FC = (/*{ sidebarCondition, closeSidebar }*/) => {
   const location = useLocation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
