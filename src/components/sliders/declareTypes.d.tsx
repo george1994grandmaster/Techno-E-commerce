@@ -9,12 +9,13 @@ declare module 'swiper/react' {
     centeredSlidesBounds?: boolean;
     initialSlide?: number;
     loopedSlides?: number;
+    effect?: string;
     grabCursor?: boolean;
     navigation?: {
       prevEl: string;
       nextEl: string;
     };
-    
+    breakpoints?: Partial<{}>;
   }
 }
 

@@ -45,13 +45,16 @@
 
 .navigation-swiper {
   
-  //.swiper-slide {
-    
     img {
       height: 400px;
       object-fit: contain;
     }
-  //}
+
+    .swiper-button-prev {
+      top: auto !important;
+      bottom: 70% !important;
+    }
+ 
 }
 
 .products-swiper-container {
@@ -107,6 +110,10 @@
   .card {
     height: 100%;
     margin: 0 20px;
+
+    @media (max-width: 720px) {
+      margin: 0;
+    }
   }
 
   .swiper-slide {
@@ -127,6 +134,19 @@
   
   img {
     height: 180px;
+    object-fit: contain;
+  }
+}
+
+.modal-wrapper {
+  
+  .swiper {
+    //height: 100%;
+    //padding-top: 5%;
+  }
+
+  img {
+    height: 500px;
     object-fit: contain;
   }
 }

@@ -5,14 +5,34 @@
 @import './swiper';
 @import './shoppingCart';
 @import './accordion';
+@import './home';
+@import './selectedProduct.scss';
 
 body {
+  position: relative;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &.shadow {
+
+    overflow-y: hidden;
+
+    &:after {
+      background: rgba(0,0,0,.73);
+      bottom: 0;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 2;
+    }
+  }
 }
 
 code {
@@ -20,11 +40,24 @@ code {
     monospace;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .container {
   max-width: 1400px;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  @media (max-width: 720px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .navbar-wrapper {
@@ -216,5 +249,7 @@ code {
     }
   }
 }
+
+
 
 

@@ -22,7 +22,12 @@ const NavigatedSlider: FC<SliderProps> = ({sliderParams}) => {
     }
   }, [slideIndex]);
 
-  
+  const handleSlideClick = (index: number) => {
+    if(swiperRef.current) {
+      const slideIndex = index; 
+      dispatch(setSlideIndex(slideIndex));
+    }
+  };
 
   const handleSlideChange = (index: number) => {
     if(swiperRef.current) {
@@ -47,12 +52,11 @@ const NavigatedSlider: FC<SliderProps> = ({sliderParams}) => {
         }}
       >
         {sliderParams.map((item, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} onClick={() => handleSlideClick(index)}>
             <img src={item.src} alt={`Slide ${index}`}/>
           </SwiperSlide>
         ))}
       </Swiper>
-      
     </>
   )
 }

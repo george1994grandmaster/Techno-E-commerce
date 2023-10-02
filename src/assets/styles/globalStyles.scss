@@ -449,11 +449,14 @@
 
 .d-flex {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .f-wrap {
   flex-wrap: wrap;
+}
+
+.f-reverse {
+  flex-wrap: wrap-reverse;
 }
 
 .ai-center {
@@ -468,20 +471,12 @@
   justify-content: space-between;
 }
 
+.jc-end {
+  justify-content: flex-end;
+}
+
 .fd-column {
   flex-direction: column;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Varela,sans-serif !important;
-}
-
-.container {
-  padding-left: 50px;
-  padding-right: 50px;
 }
 
 img {
@@ -587,6 +582,10 @@ input::placeholder {
 
 .mr-5 {
   margin-right: 25px;
+}
+
+.p-md-0 {
+  padding: 0;
 }
 
 .px-1 {

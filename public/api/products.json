@@ -172,7 +172,7 @@
     },
     {
       "id": 8,
-      "name": "Sony WH-1000XM4(Wireless Noise-Canceling Headphones)",
+      "name": "Sony WH-1000XM4",
       "price": 30,
       "src": "/img/sony-Wireless-Noise-Canceling-Headphones.png",
       "category": "headphones",
@@ -342,7 +342,7 @@
     },
     {
       "id": 15,
-      "name": "Bose QuietComfort 35 II (Wireless Noise-Canceling Headphones)",
+      "name": "Bose QuietComfort 35 II",
       "price": 30,
       "src": "/img/bose-Wireless-Noise-Cancelin-Headphones.png",
       "category": "headphones",
@@ -415,7 +415,7 @@
     },
     {
       "id": 18,
-      "name": "Sennheiser Momentum 3 (Wireless Noise-Canceling Headphones)",
+      "name": "Sennheiser Momentum 3",
       "price": 50,
       "src": "/img/Sennheiser-Momentum.png",
       "category": "headphones",
@@ -534,7 +534,7 @@
     },
     {
       "id": 23,
-      "name": "Apple AirPods Pro (Wireless Earbuds)",
+      "name": "Apple AirPods Pro",
       "price": 50,
       "src": "/img/apple-airpods-pro.png",
       "category": "headphones",
@@ -634,7 +634,7 @@
     },
     {
       "id": 27,
-      "name": "JBL Everest Elite 750NC (Wireless Noise-Canceling Headphones)",
+      "name": "JBL Everest Elite 750NC",
       "price": 50,
       "src": "/img/jbl-everest-elite.png",
       "category": "headphones",

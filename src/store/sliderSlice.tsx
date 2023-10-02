@@ -8,7 +8,7 @@ const initialState: CurrentSlideIndex = {
 
 
 const sliderSlice = createSlice({
-  name: 'products',
+  name: 'slider',
   initialState,
   reducers: {
     setSlideIndex: (state, action: PayloadAction<number | null>) => {

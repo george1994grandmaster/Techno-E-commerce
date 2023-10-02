@@ -7,7 +7,7 @@ import { StyledTypography } from '../components/material_Ui';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 import Button from '../components/button';
-import Accordion from "../components/accordion"
+import Accordion from "../components/accordion";
 
 const ShoppingCart: FC = () => {
 
@@ -38,15 +38,15 @@ const ShoppingCart: FC = () => {
     <>
       <div className="py-10" style={{backgroundColor: "rgb(242, 242, 242)"}}>
         <div className="container">
-          <div className="d-flex jc-between py-10">
+          <div className="d-flex jc-between f-wrap py-10">
             <div className="xs-12 sm-12 md-8">
               <div className="d-flex fd-column" style={{gap: "100px"}}>
                 {cartItems && cartItems.map((item: Product) => (
-                  <div className="d-flex jc-between" key={item.id}>
-                    <div className="xs-12 sm-12 md-4">
-                      <img src={item.src} alt="shopping-cart-img" style={{height: "300px", objectFit: "contain"}}/>
+                  <div className="d-flex jc-between f-wrap" key={item.id}>
+                    <div className="xs-12 sm-4 md-4 mb-5">
+                      <img src={item.src} alt="shopping-cart-img" style={{display: "block", height: "300px", objectFit: "contain"}}/>
                     </div>
-                    <div className="xs-12 sm-12 md-7 px-3">
+                    <div className="xs-12 sm-4 md-7 px-3">
                       <div className="d-flex fd-column jc-between" style={{height: "100%"}}>
                         <div>
                           <StyledTypography variant="body1" fontSize="16px" fontWeight="600" className="mb-2">
@@ -56,8 +56,8 @@ const ShoppingCart: FC = () => {
                             <span className="mr-2">PRICE:</span><span style={{marginRight: "2px"}}>$</span>{item.totalPrice}
                           </StyledTypography>
                         </div>
-                        <div>
-                          <div className="d-flex ai-center mb-6" style={{gap: "10px"}}>
+                        <div className="mb-4">
+                          <div className="d-flex ai-center f-wrap" style={{gap: "10px"}}>
                             <div className="shopping-btn">
                               <Button svg={<FontAwesomeIcon icon={faPlus} />} bgColor="#484848" color="#fff" innerSpacing="9px" onClick={() => addProductHandler(item)}/>
                             </div>
@@ -78,7 +78,7 @@ const ShoppingCart: FC = () => {
                 ))}
               </div>
             </div>
-            <div className="xs-12 sm-12 md-3">
+            <div className="xs-12 sm-6 md-3">
               <div className="d-flex fd-column px-6 py-6 bg-light" style={{gap: "40px"}}>
                 <div className="d-flex fd-column" style={{gap: "10px"}}>
                   <div className="d-flex ai-center jc-between">
@@ -99,7 +99,7 @@ const ShoppingCart: FC = () => {
                     <span>/</span>
                     <span style={{textDecoration: "underline"}}> Create Account</span>
                   </StyledTypography>
-                  </Link>
+                </Link>
                 <Link to="/contact">
                   <StyledTypography variant="body1" fontSize="14px" fontWeight="500" color="rgba(0, 0, 0, 0.88)" >
                     Need Help! Visit <span style={{textDecoration: "underline"}}>Custom Service</span>

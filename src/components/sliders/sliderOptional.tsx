@@ -1,7 +1,8 @@
-import { FC, useRef } from 'react';
+import { FC } from 'react';
 import { SliderProps } from "../../types"
 import SelectedProductSlider from './selectedProductSlider';
 import ProductListSlider from './productListSlider';
+import ModalSlider from './modalSlider';
 
 
 const SliderOptional: FC<SliderProps> = ({ sliderName, sliderParams }) => {
@@ -14,6 +15,10 @@ const SliderOptional: FC<SliderProps> = ({ sliderName, sliderParams }) => {
     case 'productListSlider':
       return (
         <ProductListSlider sliderParams={sliderParams}/>
+      );
+    case 'modalSlider':
+      return (
+        <ModalSlider sliderParams={sliderParams}/>
       );
     default:
       return (

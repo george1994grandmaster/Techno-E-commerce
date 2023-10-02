@@ -35,24 +35,24 @@ const Home: FC = () => {
           </StyledTypography>
           <div className="productList-container">
             {allProducts &&
-              allProducts.slice(fromItem, limitItem).map((product: Product) => (
-                <div className="card" key={product.id}>
-                  <Link to={`/products/detail/${product.id}`} key={product.id}>
-                    <div style={{ width: '100%'}}>
-                      <img src={product.src} alt="product" style={{ display: 'block' }} />
-                    </div>
-                    <div className="card-body">
-                      <StyledTypography  variant="body1" color="#000" fontSize="16px"  fontWeight="600" className="mb-2">
-                        {product.name}
-                      </StyledTypography>
-                      <StyledTypography variant="body1" color="rgba(0, 0, 0, 0.88)" fontSize="16px" fontWeight="600">
-                        <span className="mr-2">PRICE:</span>
-                        <span style={{marginRight: "2px"}}>$</span>
-                        {product.price}
-                      </StyledTypography>
-                    </div>
-                  </Link>
-                </div>
+            allProducts.slice(fromItem, limitItem).map((product: Product) => (
+              <div className="card" key={product.id}>
+                <Link to={`/products/detail/${product.id}`} key={product.id}>
+                  <div style={{ width: '100%'}}>
+                    <img src={product.src} alt="product" style={{ display: 'block' }} />
+                  </div>
+                  <div className="card-body">
+                    <StyledTypography  variant="body1" color="#000" fontSize="16px"  fontWeight="600" className="mb-2">
+                      {product.name}
+                    </StyledTypography>
+                    <StyledTypography variant="body1" color="rgba(0, 0, 0, 0.88)" fontSize="16px" fontWeight="600">
+                      <span className="mr-2">PRICE:</span>
+                      <span style={{marginRight: "2px"}}>$</span>
+                      {product.price}
+                    </StyledTypography>
+                  </div>
+                </Link>
+              </div>
             ))}
           </div>
         </div>
@@ -60,13 +60,13 @@ const Home: FC = () => {
       {presentationContent &&
         <div className="container">
           <div className="py-10">
-            <div className="d-flex">
-              <div className="xs-12 sm-12 md-6">
-                <img src={presentationContent.src} alt="presentation-img" style={{height: "27vw", display: "block"}}/>
+            <div className="d-flex f-wrap">
+              <div className="xs-12 sm-12 md-6 presentation-img-content">
+                <img src={presentationContent.src} alt="presentation-img"/>
               </div>  
               <div className="xs-12 sm-12 md-6">
                 <div className="d-flex ai-center jc-center" style={{height: "100%"}}>
-                  <div className="px-10">
+                  <div className="text-layout">
                     <StyledTypography  variant="h5" color="rgba(0, 0, 0, 0.88)" fontSize="18px"  fontWeight="600" className="mb-5">
                       {presentationContent.title}
                     </StyledTypography>

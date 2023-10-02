@@ -17,7 +17,7 @@ const BottomWrapper: FC = () => {
   return (
     <footer>
       <div className="container">
-        <div className="d-flex jc-between">
+        <div className="d-flex jc-between f-wrap">
           <div className="xs-12 sm-12 md-9 px-3">
             <div className="d-flex jc-between fd-column" style={{height: "100%"}}>
               <div>
