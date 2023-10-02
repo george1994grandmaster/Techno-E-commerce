@@ -122,9 +122,9 @@ const SelectProduct: FC = () => {
                 Description
               </StyledTypography>
               <StyledTypography variant="body1" color="rgba(0, 0, 0, 0.88)" fontSize="14px" fontWeight="500" className="mb-5">
-                {products[0].description}
+                {products[0] && products[0].description}
               </StyledTypography>
-              {products[0].specifications && Object.entries(products[0].specifications).map(([key, value]) => (
+              {products[0] && products[0].specifications && Object.entries(products[0].specifications).map(([key, value]) => (
               <ul key={key} style={{ listStyleType: "circle" }}>
                 <li style={{ margin: "10px 20px" }}>
                   <StyledTypography variant="body1" color="rgba(0, 0, 0, 0.88)" fontSize="14px" fontWeight="500">
